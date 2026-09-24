@@ -1,0 +1,24 @@
+---
+import SiteLayout from './SiteLayout.astro';
+interface Props {
+  frontmatter: { title: string; description: string; label?: string };
+}
+const { frontmatter } = Astro.props;
+---
+
+<SiteLayout
+  title={`${frontmatter.title} — Tydal`}
+  description={frontmatter.description}
+>
+  <article class="container content-page">
+    <a class="text-link back-link" href="/">
+      ← Back to Tydal
+    </a>
+    <p class="eyebrow">{frontmatter.label ?? 'The project'}</p>
+    <h1>{frontmatter.title}</h1>
+    <p class="content-intro">{frontmatter.description}</p>
+    <div class="prose">
+      <slot />
+    </div>
+  </article>
+</SiteLayout>

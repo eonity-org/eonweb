@@ -1,0 +1,146 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import '../../styles/developers.css';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('developers');
+  return pages.map((page) => ({
+    params: { slug: page.id === 'index' ? undefined : page.id },
+    props: { page },
+  }));
+}
+
+interface Props {
+  page: CollectionEntry<'developers'>;
+}
+const { page } = Astro.props;
+const pages = (await getCollection('developers')).sort(
+  (a, b) =>
+    a.data.order - b.data.order || a.data.title.localeCompare(b.data.title),
+);
+const sections = [...new Set(pages.map((entry) => entry.data.section))];
+const href = (id: string) =>
+  id === 'index' ? '/developers/' : `/developers/${id}/`;
+const { Content, headings } = await render(page);
+const toc = headings.filter(
+  (heading) => heading.depth === 2 || heading.depth === 3,
+);
+const overview = page.id === 'index';
+---
+
+<SiteLayout
+  title={`${page.data.title} — Tydal developers`}
+  description={page.data.description}
+>
+  <div class="container docs-shell">
+    <aside class="docs-sidebar">
+      <a class="docs-space" href="/developers/">
+        Tydal <span>Developer space</span>
+      </a>
+      <nav aria-label="Documentation">
+        {sections.map((section) => (
+          <div class="docs-nav-group">
+            <p class="eyebrow">{section}</p>
+            <ul>
+              {pages
+                .filter((entry) => entry.data.section === section)
+                .map((entry) => (
+                  <li>
+                    <a
+                      href={href(entry.id)}
+                      aria-current={entry.id === page.id ? 'page' : undefined}
+                    >
+                      {entry.data.title}
+                    </a>
+                  </li>
+                ))}
+            </ul>
+          </div>
+        ))}
+      </nav>
+      <a
+        class="docs-source"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Opens in a new tab"
+        href="https://github.com/eonity-org/eonweb/tree/main/src/content/developers"
+      >
+        Documentation source ↗
+      </a>
+    </aside>
+    <article class="docs-article">
+      <nav class="docs-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Tydal</a>
+        <span aria-hidden="true">/</span>
+        {overview ? (
+          <span>Developers</span>
+        ) : (
+          <>
+            <a href="/developers/">Developers</a>
+            <span aria-hidden="true">/</span>
+            <span>{page.data.title}</span>
+          </>
+        )}
+      </nav>
+      <header class="docs-heading">
+        <p class="eyebrow">{page.data.section}</p>
+        <h1>{page.data.title}</h1>
+        <p class="docs-description">{page.data.description}</p>
+      </header>
+      {page.data.status === 'planned' && (
+        <div class="docs-notice">
+          <strong>Coming soon</strong>
+          <p>
+            This page is a placeholder. Instructions and examples will be added
+            as they are verified.
+          </p>
+        </div>
+      )}
+      {toc.length > 0 && (
+        <nav class="docs-toc" aria-label="On this page">
+          <p class="eyebrow">On this page</p>
+          <ul>
+            {toc.map((heading) => (
+              <li class:list={{ 'docs-toc-nested': heading.depth === 3 }}>
+                <a href={`#${heading.slug}`}>{heading.text}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
+      <div class="prose docs-prose">
+        <Content />
+      </div>
+      {overview && (
+        <div class="docs-cards">
+          {pages
+            .filter((entry) => entry.id !== 'index')
+            .map((entry) => (
+              <a class="docs-card" href={href(entry.id)}>
+                <span class="docs-card-status">
+                  {entry.data.status === 'planned' ? 'Coming soon' : 'Guide'}
+                </span>
+                <h2>
+                  {entry.data.title}
+                  <span aria-hidden="true">↗</span>
+                </h2>
+                <p>{entry.data.description}</p>
+              </a>
+            ))}
+        </div>
+      )}
+      <footer class="docs-page-footer">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Opens in a new tab"
+          href={`https://github.com/eonity-org/eonweb/blob/main/src/content/developers/${page.id}.md`}
+        >
+          Edit this page on GitHub ↗
+        </a>
+        <span>Built together, in the open.</span>
+      </footer>
+    </article>
+  </div>
+</SiteLayout>

@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install dependencies in Docker
+        run: docker compose run --rm web npm ci
+      - name: Check formatting
+        run: docker compose run --rm web npm run format:check
+      - name: Check and build the website
+        run: docker compose run --rm web npm run build
+      - name: Stop containers
+        if: always()
+        run: docker compose down --remove-orphans

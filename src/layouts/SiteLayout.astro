@@ -1,0 +1,147 @@
+---
+import '../styles/global.css';
+import ExternalArrow from '../components/ExternalArrow.astro';
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = 'Tydal — Control your knowledge flow.',
+  description = 'Tydal is the open-source typed Digital Asset Layer. Structure, enrich and share digital resources through contextual Vaults for people, applications and AI agents.',
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href={canonical} />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/brand/tydal-symbol.png?v=20260921-transparent"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">
+      Skip to content
+    </a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Tydal home">
+          <img
+            src="/brand/tydal.png?v=20260921-transparent"
+            width="450"
+            height="200"
+            alt="Tydal"
+          />
+        </a>
+        <nav aria-label="Main navigation">
+          <a href="/#platform">Platform</a>
+          <a href="/#applications">Applications</a>
+          <a
+            href="/developers/"
+            aria-current={
+              Astro.url.pathname.startsWith('/developers/') ? 'page' : undefined
+            }
+          >
+            Developers
+          </a>
+          <a href="/#open-source">Open source</a>
+        </nav>
+        <a
+          class="header-github"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Opens in a new tab"
+          href="https://github.com/eonity-org/tydal"
+        >
+          GitHub <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <div>
+          <a class="brand" href="/" aria-label="Tydal home">
+            <img
+              src="/brand/tydal.png?v=20260921-transparent"
+              width="450"
+              height="200"
+              alt="Tydal"
+            />
+          </a>
+          <p>Structure your content. Open its possibilities.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/developers/">Developer docs</a>
+          <a href="/about/">About the project</a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Opens in a new tab"
+            href="https://github.com/eonity-org/tydal"
+          >
+            GitHub <ExternalArrow />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Opens in a new tab"
+            href="https://x.com/_tydalia"
+          >
+            Follow Tydalia <ExternalArrow />
+          </a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>
+          An open-source project by <a href="/about/">Eonity</a>.{' '}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Opens in a new tab"
+            href="https://github.com/eonity-org/tydal/blob/main/LICENSE"
+          >
+            Apache-2.0
+          </a>
+          .
+        </span>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Opens in a new tab"
+          href="https://github.com/eonity-org/eonweb"
+        >
+          Website source <ExternalArrow />
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script>
+  const header = document.querySelector<HTMLElement>('.site-header');
+  if (header) {
+    const updateHeaderHeight = () => {
+      document.documentElement.style.setProperty(
+        '--header-height',
+        `${header.getBoundingClientRect().height}px`,
+      );
+    };
+    updateHeaderHeight();
+    new ResizeObserver(updateHeaderHeight).observe(header);
+  }
+</script>

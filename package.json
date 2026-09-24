@@ -1,0 +1,32 @@
+{
+  "name": "eonweb",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "astro": "7.3.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "prettier": "3.9.7",
+    "prettier-plugin-astro": "1.0.1",
+    "typescript": "6.0.3"
+  },
+  "description": "The Tydal product website, built with Astro and TypeScript.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eonity-org/eonweb.git"
+  },
+  "license": "Apache-2.0"
+}

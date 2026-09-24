@@ -1,0 +1,43 @@
+# Dependencies and generated Astro output
+node_modules/
+dist/
+.astro/
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Package-manager caches and logs
+.npm/
+.pnpm-store/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tsbuildinfo
+
+# Test and local inspection output
+coverage/
+playwright-report/
+test-results/
+
+# Local hosting metadata
+.vercel/
+.netlify/
+.wrangler/
+
+# Operating systems and editors
+.DS_Store
+.AppleDouble
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.swp
+*.swo
+*~
