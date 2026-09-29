@@ -12,6 +12,12 @@ The management API works with resources, collections and workspaces. Vault inter
 
 Use the [OpenAPI specification](https://github.com/eonity-org/tydal/blob/main/backend/docs/openapi.yaml) for management endpoints and the [Vault specification](https://github.com/eonity-org/tydal/blob/main/docs/architecture/VAULT_SYSTEM.md) for Vault addressing and operations. The [TypeScript SDK](https://github.com/eonity-org/tydal/blob/main/client/README.md) provides application clients for both management and Vault consumption.
 
+## Read and write through a Vault
+
+A client can read the resources a Vault exposes and, with a suitable write key, invoke its supported write operations. The Vault's purpose and permissions determine which operations are available; a write key does not grant general management access.
+
+[FullFrame](/developers/fullframe/) shows this in a photography application: it reads photographs, accepts curator uploads during setup and publishes a selection through the gallery Vault's write methods. Read the [Vault write contract](https://github.com/eonity-org/tydal/blob/main/docs/architecture/VAULT_WRITE_METHODS.md) for operation discovery, permissions and payloads.
+
 ## Choose an AI connection
 
 ### Enrichment inside Tydal

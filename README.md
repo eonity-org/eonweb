@@ -6,11 +6,13 @@ The [Tydal product repository](https://github.com/eonity-org/tydal) is public an
 
 > Control your knowledge flow.
 
-The planned public home is **https://eonity.org**. This repository contains the website only. It does not contain the Tydal backend or the separately planned MCP publishing client.
+The public home is **https://eonity.org**. This repository contains the website only. It does not contain the Tydal backend or the separately planned MCP publishing client.
 
 ## Status
 
-Initial website development. The initial homepage concept, About page, supplied brand assets and repository tooling are in place. The homepage Vault diagram is an interactive concept illustration, not a live Tydal connection. Public deployment is not configured.
+Published at eonity.org through GitHub Pages. The homepage, About page and developer guides introduce Tydal, with FullFrame documented as its first standalone open-source client product. The homepage Vault diagram is an interactive concept illustration, not a live Tydal connection.
+
+Eonity.org remains Tydal's product and developer home. Tydalia.com is reserved for a future demonstrator with multiple running client experiences; no content migration is planned for this update. FullFrame is an integration example within the broader platform story.
 
 ## Stack
 
@@ -96,7 +98,7 @@ See [the website plan](docs/website-plan.md) and [contribution notes](CONTRIBUTI
 
 `astro.config.mjs` sets the canonical site to `https://eonity.org` and uses static output. No environment variables are required by the initial website.
 
-CI uses the same Docker Compose service to install dependencies, check formatting and run Astro/TypeScript checks and a production build. It does not deploy. The `dist/` directory can be served by a static host; a provider and deployment workflow will be selected separately.
+CI uses the same Docker Compose service to install dependencies, check formatting and run Astro/TypeScript checks and a production build. The separate `pages.yml` workflow builds and deploys `dist/` to GitHub Pages on pushes to `main` or manual dispatch.
 
 Keep credentials in local environment files or CI secrets. Generated output, caches and local environment files are excluded by `.gitignore`.
 

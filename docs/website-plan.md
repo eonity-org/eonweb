@@ -16,6 +16,8 @@ Introduce Tydal to developers and early adopters, explain the Semantic Asset Pla
 
 ## Naming and terminology
 
+Use **FullFrame** as one word, with capital F in both parts, in all website copy. Keep `fullframe` lowercase in URLs and repository identifiers. This is the agreed brand spelling; upstream README prose may still use the older two-word form.
+
 The founder defines **DAL** as **Digital Asset Layer**. **TY** connects TYDAL to the TY / Eonity product family. Use “Tydal” in running text and preserve the supplied logo; “TYDAL — the typed Digital Asset Layer” explains the name.
 
 “Control your knowledge flow” remains the main headline. “Semantic Asset Platform” describes the product category, while “Digital Asset Layer” explains its architectural role: digital assets → Tydal → people, applications and AI.
@@ -32,10 +34,18 @@ Verified 2026-09-24: the product repository is https://github.com/eonity-org/tyd
 
 ## Page plan
 
+### Current direction — 2026-09-29
+
+Keep eonity.org as Tydal's product and developer home. Explain the whole platform before individual clients. FullFrame is the first standalone open-source client product and a concrete integration case study, linked from Applications and the developer guides. Its case study explains what Tydal provides, what the client adds, and how the same model supports other content and applications. It does not need a separate top-level product navigation item.
+
+Reserve tydalia.com for a future demonstrator covering multiple running client experiences. Revisit it when there are contrasting uses to show alongside photography. This update makes no domain changes and does not turn Eonity's homepage into a product-family directory.
+
+### Content areas
+
 - Hero architecture: the Tydal repository is the core; resources, schemas and enrichment belong there. Vaults are contextual views feeding experiences for people, applications and AI agents. Keep deeper architecture details for future developer documentation.
 - Home: promise, illustrative Vault model, key benefits, applications and developer entry points.
 - Platform: resources, schemas, collections, Vaults, enrichment and publishing.
-- Applications: Full Frame, AI/MCP connections and other confirmed examples.
+- Applications: FullFrame as a client case study, AI/MCP connections and a build-your-own path.
 - Developers: architecture and links to maintained setup/API/MCP documentation.
 - Open source: repositories, license, contribution and project maturity.
 - About: Eonity relationship and project purpose.
@@ -64,6 +74,6 @@ Confirmed public domain: **https://eonity.org**, superseding the earlier tydalia
 
 For GitHub Pages, publish the generated `dist/` artifact through GitHub Actions and configure `eonity.org` in the repository Pages settings. Verify the domain, configure apex DNS records for GitHub Pages and point the `www` CNAME to `eonity-org.github.io`, and enable HTTPS. Domain selection alone does not configure DNS or publish the site.
 
-## Before public launch
+## Subsequent updates
 
-Verify public source/documentation/demo destinations, replace any illustrative product representations where real screenshots are needed, check responsive and keyboard behavior, and configure the chosen static hosting provider.
+The website is published through `.github/workflows/pages.yml`. Verify public source/documentation/demo destinations, add actual captures when available, and check responsive and keyboard behavior for changed pages. Keep the Tydal product model central as client examples grow.
