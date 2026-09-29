@@ -38,7 +38,22 @@ These are supported operations on one Vault, authorized by its write key. The ap
 
 ## Apply the pattern to your own client
 
+### Ideas for museums, archives and education
+
+FullFrame's exhibition and curation workflow suggests several uses for organizations with photographic collections:
+
+- **Museums and galleries:** accompany a physical exhibition with an online selection of photographs, captions and an introduction, or present a thematic selection from a photographic collection.
+- **Archives and local heritage groups:** bring together historical photographs around a place, period or event, with credits and descriptions that help visitors understand their context.
+- **Art schools and universities:** publish a student photography showcase. An optional jury can support the selection before the exhibition opens.
+- **Photography societies and festivals:** curate a group exhibition, invite jurors to review the photographs and publish the selected works.
+
+These are suggested applications of the existing workflow. Curators prepare the photographs and exhibition texts; FullFrame provides the presentation, selection and optional jury. Specialized museum cataloguing or other institutional workflows would need their own integration or client features.
+
+### Extend the experience with Tydal
+
 Start with the resources your application needs and the context a Vault should expose. Read the Vault's metadata to discover its available capabilities, use its resource addresses, and request only the write permissions the workflow requires.
+
+For example, a museum could use FullFrame for its public photography exhibition and build a separate research experience over related documents and collection metadata in Tydal. Different Vaults would define the content and access rules for each audience. This is a possible application of Tydal's broader model, beyond FullFrame's exhibition interface.
 
 Your client supplies its own interface and domain-specific workflows. Tydal supplies the resource structure and controlled access. A document knowledge space or an AI connection can use that foundation with different content and capabilities. The bundled [Gallery](https://github.com/eonity-org/tydal/blob/main/vaults/gallery/README.md), [knowledge graph](https://github.com/eonity-org/tydal/blob/main/vaults/obsidian/README.md) and [AI chat](https://github.com/eonity-org/tydal/blob/main/vaults/aity/README.md) clients provide other examples; the Gallery renderer is separate from FullFrame's curator and jury application.
 
