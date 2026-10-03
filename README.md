@@ -88,7 +88,7 @@ The Markdown-based developer space is at `/developers/`. Edit pages in `src/cont
 
 The main product name is **Tydal**. The website is published at eonity.org; Eonity is the umbrella attribution. The design is predominantly light, based on Eonity blue (`#005275`, sampled from the September 2026 logos) and slate blue (`#52738C`), with blue-grey (`#8694A1`) connectors and borders, pale blue surfaces and a limited dark blue section. Preserve the supplied logo artwork.
 
-The brand assets use the supplied transparent 200px-high PNGs: Tydal (450 × 200), Eonity (578 × 200) and the Ty symbol (200 × 200). Tydal appears in the header and footer; the Ty symbol is the favicon. The header stays white and remains visible while scrolling. Anchor offsets follow its height, including when navigation wraps on mobile. Backgrounds, greys and dark-section colors are tints and shades of the three brand colors defined in `src/styles/global.css`.
+The brand assets use the October 2026 sRGB exports from `LOGOS/NEW_LOGOS`: the complete Tydal master (315 × 140), complete Eonity master (405 × 140), and simplified monochrome Ty symbol (64 × 64). Tydal appears in the header and footer; the Ty symbol is the favicon. The header stays white and remains visible while scrolling. Anchor offsets follow its height, including when navigation wraps on mobile. Backgrounds, greys and dark-section colors are tints and shades of the brand colors defined in `src/styles/global.css`.
 
 Write content in English. Prefer working examples and verified product capabilities. Keep repository and demo links centralized as they become available. Do not present illustrative diagrams as live product screenshots.
 

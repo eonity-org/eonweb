@@ -1,10 +1,12 @@
 @charset "UTF-8";
 :root {
   --ink: color-mix(in srgb, var(--blue) 75%, black);
-  --blue: #005275;
-  --accent: #52738c;
-  --slate: #8694a1;
-  --muted: var(--accent);
+  /* Sampled from the October 2026 Tydal master in sRGB. */
+  --blue: #0a5475;
+  --accent: #287c9c;
+  --accent-text: color-mix(in srgb, var(--accent) 88%, black);
+  --slate: #5295b3;
+  --muted: #1a5d7d;
   --paper: color-mix(in srgb, var(--slate) 4%, white);
   --line: color-mix(in srgb, var(--slate) 28%, white);
   --surface: color-mix(in srgb, var(--blue) 5%, white);
@@ -107,7 +109,7 @@ button:focus-visible {
 }
 .header-inner nav a:hover,
 .footer-links a:hover {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 .header-github {
   font-size: 15px;
@@ -208,7 +210,7 @@ h1 span {
   padding-block: 6px;
 }
 .text-link:hover {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 .hero-footnote {
   font-size: 14px;
@@ -223,7 +225,7 @@ h1 span {
   border-radius: 10px;
   padding: 26px 27px 16px;
   position: relative;
-  box-shadow: 0 14px 40px -32px #00527555;
+  box-shadow: 0 14px 40px -32px color-mix(in srgb, var(--blue) 33%, transparent);
 }
 .model-header {
   display: flex;
@@ -242,7 +244,7 @@ h1 span {
   font:
     12px ui-monospace,
     monospace;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 .model-resources {
   display: grid;
@@ -254,7 +256,7 @@ h1 span {
   border: 1.5px solid var(--blue);
   border-radius: 8px;
   padding: 20px 16px 0;
-  box-shadow: 0 8px 24px #00527512;
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--blue) 7%, transparent);
 }
 .repository-heading {
   display: flex;
@@ -316,12 +318,12 @@ h1 span {
   flex-direction: column;
   align-items: flex-start;
   gap: 13px;
-  box-shadow: 0 3px 6px #00527503;
+  box-shadow: 0 3px 6px color-mix(in srgb, var(--blue) 1%, transparent);
 }
 .resource small {
   display: block;
   font-size: 12px;
-  color: var(--accent);
+  color: var(--accent-text);
   margin-top: 4px;
 }
 .resource-icon {
@@ -329,7 +331,7 @@ h1 span {
   position: relative;
   width: 27px;
   height: 29px;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 .document-icon {
   border: 1.5px solid var(--accent);
@@ -407,7 +409,7 @@ h1 span {
   background: #fff;
   border: 1px solid var(--slate);
   border-radius: 6px;
-  box-shadow: 0 6px 20px #52738c10;
+  box-shadow: 0 6px 20px color-mix(in srgb, var(--accent) 6%, transparent);
 }
 .vault-top {
   display: flex;
@@ -421,12 +423,12 @@ h1 span {
   display: block;
   font-weight: 400;
   font-size: 12px;
-  color: var(--accent);
+  color: var(--accent-text);
   margin-top: 6px;
 }
 .vault-symbol {
   font-size: 30px;
-  color: var(--accent);
+  color: var(--accent-text);
   line-height: 1;
 }
 .vault-light {
@@ -442,7 +444,7 @@ h1 span {
   justify-content: space-between;
   padding: 12px 17px;
   font-size: 12px;
-  color: var(--accent);
+  color: var(--accent-text);
   letter-spacing: 0.1px;
 
   flex-wrap: wrap;
@@ -466,7 +468,7 @@ h1 span {
   border-radius: 4px;
   padding: 12px 5px;
   font-size: 13px;
-  color: var(--accent);
+  color: var(--accent-text);
   transition:
     background 0.18s,
     color 0.18s;
@@ -485,19 +487,19 @@ h1 span {
   color: white;
 }
 .model-choices button:hover {
-  border-color: var(--accent);
+  border-color: var(--accent-text);
 }
 .model-explanation {
   font-size: 13px;
   line-height: 1.5;
   min-height: 57px;
   padding-top: 15px;
-  color: var(--accent);
+  color: var(--accent-text);
   text-align: center;
 }
 .knowledge-model figcaption {
   font-size: 12px;
-  color: var(--accent);
+  color: var(--accent-text);
   border-top: 1px solid var(--line);
   padding-top: 13px;
   display: flex;
@@ -508,7 +510,7 @@ h1 span {
   line-height: 1.5;
 }
 .knowledge-model figcaption span {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 .principles-band {
   border-block: 1px solid var(--line);
@@ -522,7 +524,7 @@ h1 span {
   font:
     13px ui-monospace,
     monospace;
-  color: var(--accent);
+  color: var(--accent-text);
   letter-spacing: 1px;
   text-transform: uppercase;
 
@@ -547,7 +549,7 @@ h1 span {
   margin-bottom: 55px;
 }
 .section-heading .eyebrow {
-  color: var(--accent);
+  color: var(--accent-text);
   margin-bottom: 19px;
 }
 h2 {
@@ -580,7 +582,7 @@ h2 {
   font:
     14px ui-monospace,
     monospace;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 h3 {
   font-size: 25px;
@@ -600,7 +602,7 @@ h3 {
 .benefit-detail {
   display: block;
   font-size: 13px;
-  color: var(--accent);
+  color: var(--accent-text);
   margin-top: 28px;
 }
 .model-summary {
@@ -616,13 +618,13 @@ h3 {
 }
 .model-summary b {
   font-size: 18px;
-  color: var(--accent);
+  color: var(--accent-text);
   font-weight: 400;
 }
 .model-summary > a {
   border-left: 1px solid var(--line);
   padding-left: 25px;
-  color: var(--accent);
+  color: var(--accent-text);
   font-size: 14px;
 }
 .model-summary > a span {
@@ -649,7 +651,7 @@ h3 {
 }
 .application-label .eyebrow {
   font-size: 12px;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 .application h3 {
   font-size: 28px;
@@ -662,7 +664,7 @@ h3 {
 }
 .application-category {
   font-size: 13px;
-  color: var(--accent);
+  color: var(--accent-text);
   display: block;
   margin-top: 29px;
 }
@@ -786,7 +788,7 @@ h3 {
   align-items: center;
 }
 .open-source-section .eyebrow {
-  color: var(--accent);
+  color: var(--accent-text);
   margin-bottom: 20px;
 }
 .open-source-section p:not(.eyebrow) {
@@ -857,7 +859,7 @@ h3 {
   margin-bottom: 45px;
 }
 .content-page > .eyebrow {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 .content-page h1 {
   font-size: 60px;
@@ -888,7 +890,7 @@ h3 {
 .prose a {
   text-decoration: underline;
   text-underline-offset: 4px;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 @media (min-width: 1500px) {
   .hero {
