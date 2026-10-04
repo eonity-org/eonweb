@@ -1,4 +1,5 @@
 ---
+import '@fontsource-variable/manrope';
 import '../styles/global.css';
 import ExternalArrow from '../components/ExternalArrow.astro';
 interface Props {
@@ -6,10 +7,13 @@ interface Props {
   description?: string;
 }
 const {
-  title = 'Tydal — Control your knowledge flow.',
-  description = 'Tydal is the open-source typed Digital Asset Layer. Structure, enrich and share digital resources through contextual Vaults for people, applications and AI agents.',
+  title = 'TYDAL — Control your knowledge flow.',
+  description = 'TYDAL is the open-source typed Digital Asset Layer. Structure, enrich and share digital resources through contextual Vaults for people, applications and AI agents.',
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL('/og-image.png', Astro.site);
+const ogImageAlt =
+  'The tydal logo above the line “Control your knowledge flow.” and “Your content. Your structure. Your choice of AI.”';
 ---
 
 <!doctype html>
@@ -20,6 +24,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta name="description" content={description} />
     <meta name="theme-color" content="#ffffff" />
     <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link
       rel="icon"
       type="image/png"
@@ -29,6 +35,15 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="TYDAL" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={ogImageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@eonity_org" />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
+    <link rel="sitemap" href="/sitemap.xml" />
     <title>{title}</title>
   </head>
   <body>
@@ -37,12 +52,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     </a>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="/" aria-label="Tydal home">
+        <a class="brand" href="/" aria-label="TYDAL home">
           <img
             src="/brand/tydal.png?v=20261003-srgb"
             width="315"
             height="140"
-            alt="Tydal"
+            alt="TYDAL"
           />
         </a>
         <nav aria-label="Main navigation">
@@ -75,12 +90,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <footer class="site-footer">
       <div class="container footer-top">
         <div>
-          <a class="brand" href="/" aria-label="Tydal home">
+          <a class="brand" href="/" aria-label="TYDAL home">
             <img
               src="/brand/tydal.png?v=20261003-srgb"
               width="315"
               height="140"
-              alt="Tydal"
+              alt="TYDAL"
             />
           </a>
           <p>Structure your content. Open its possibilities.</p>
@@ -100,15 +115,16 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
             target="_blank"
             rel="noopener noreferrer"
             title="Opens in a new tab"
-            href="https://x.com/_tydalia"
+            href="https://x.com/eonity_org"
           >
-            Follow Tydalia <ExternalArrow />
+            Follow Eonity on X <ExternalArrow />
           </a>
         </div>
       </div>
       <div class="container footer-bottom">
         <span>
-          © 2026 Eonity (https://eonity.org). An open-source project.{' '}
+          © 2026 <a href="/about/#an-eonity-project">Eonity</a>. An open-source
+          project.{' '}
           <a
             target="_blank"
             rel="noopener noreferrer"
