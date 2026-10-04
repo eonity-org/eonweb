@@ -8,7 +8,7 @@ status: ready
 
 ## Services and environment
 
-The [deployment guide](https://github.com/eonity-org/tydal/blob/main/DEPLOYMENT.md) covers environment variables, database and queue services, search, storage and production setup. Use the templates and instructions from the version of Tydal you are running.
+The [deployment guide](https://github.com/eonity-org/tydal/blob/main/DEPLOYMENT.md) covers environment variables, database and queue services, search, storage and production setup. Use the templates and instructions from the version of TYDAL you are running.
 
 ## Schemas and search
 

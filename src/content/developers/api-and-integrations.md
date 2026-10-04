@@ -20,9 +20,9 @@ A client can read the resources a Vault exposes and, with a suitable write key, 
 
 ## Choose an AI connection
 
-### Enrichment inside Tydal
+### Enrichment inside TYDAL
 
-Tydal can propose descriptions, tags and other metadata using configured AI providers. Suggestions go through review or configured automatic approval. See [AI surfaces](https://github.com/eonity-org/tydal/blob/main/docs/architecture/AI_SURFACES.md) for the enrichment pipeline and provider choices.
+TYDAL can propose descriptions, tags and other metadata using configured AI providers. Suggestions go through review or configured automatic approval. See [AI surfaces](https://github.com/eonity-org/tydal/blob/main/docs/architecture/AI_SURFACES.md) for the enrichment pipeline and provider choices.
 
 ### Organization MCP
 

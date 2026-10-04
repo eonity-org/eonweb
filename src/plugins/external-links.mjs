@@ -14,9 +14,13 @@ export default function externalLinks({ site }) {
         } catch {
           return;
         }
+        // Links to images and videos open in a new tab too, so readers keep their place.
+        const media = /\.(webp|png|jpe?g|gif|svg|mp4|webm)$/i.test(
+          url.pathname,
+        );
         if (
           !['http:', 'https:'].includes(url.protocol) ||
-          url.origin === origin
+          (url.origin === origin && !media)
         )
           return;
         const rel = Array.isArray(properties.rel)

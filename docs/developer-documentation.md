@@ -29,10 +29,10 @@ Place screenshots under `public/developers/screenshots/` and reference them usin
 ```md
 ![Resource details showing metadata fields](/developers/screenshots/resource-details.png)
 
-_Resource details — Tydal version X, captured YYYY-MM-DD._
+_Resource details — TYDAL version X, captured YYYY-MM-DD._
 ```
 
-Use actual product captures with descriptive alt text, captions and version context. Remove credentials and personal data before publishing. The screenshot placeholder page intentionally contains no fabricated interface images.
+Use actual product captures with descriptive alt text, captions and version context. Remove credentials and personal data before publishing. Convert captures to WebP and keep each under about 250 KB.
 
 ## Validate and publish
 

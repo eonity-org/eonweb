@@ -30,13 +30,13 @@ const overview = page.id === 'index';
 ---
 
 <SiteLayout
-  title={`${page.data.title} — Tydal developers`}
+  title={`${page.data.title} — TYDAL developers`}
   description={page.data.description}
 >
   <div class="container docs-shell">
     <aside class="docs-sidebar">
       <a class="docs-space" href="/developers/">
-        Tydal <span>Developer space</span>
+        TYDAL <span>Developer space</span>
       </a>
       <nav aria-label="Documentation">
         {sections.map((section) => (
@@ -71,7 +71,7 @@ const overview = page.id === 'index';
     </aside>
     <article class="docs-article">
       <nav class="docs-breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Tydal</a>
+        <a href="/">TYDAL</a>
         <span aria-hidden="true">/</span>
         {overview ? (
           <span>Developers</span>
@@ -123,7 +123,7 @@ const overview = page.id === 'index';
                 </span>
                 <h2>
                   {entry.data.title}
-                  <span aria-hidden="true">↗</span>
+                  <span aria-hidden="true">→</span>
                 </h2>
                 <p>{entry.data.description}</p>
               </a>
