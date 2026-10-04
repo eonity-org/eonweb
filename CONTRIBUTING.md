@@ -2,7 +2,7 @@
 
 Use Docker Compose for all Node tooling. Install dependencies with `docker compose run --rm web npm ci`; no host Node/npm installation is required.
 
-Keep changes focused on this website. The Tydal application and the future publishing client are separate projects.
+Keep changes focused on this website. The TYDAL application and the future publishing client are separate projects.
 
 ## Before a pull request
 
