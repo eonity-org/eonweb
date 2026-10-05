@@ -7,6 +7,7 @@ export const GET: APIRoute = async ({ site }) => {
   const paths = [
     '/',
     '/about/',
+    '/guides/',
     ...developers.map((page) =>
       page.id === 'index' ? '/developers/' : `/developers/${page.id}/`,
     ),

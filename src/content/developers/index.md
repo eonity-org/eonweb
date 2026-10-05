@@ -13,6 +13,7 @@ TYDAL is the typed Digital Asset Layer: schemas structure your resources, and Va
 - **Run TYDAL:** start with [Getting started](/developers/getting-started/) and the repository's deployment guide.
 - **Connect your AI:** use [API and integrations](/developers/api-and-integrations/) to choose between organization management and access to one Vault.
 - **Build an application:** explore the HTTP API, TypeScript SDK and Vault interfaces in [API and integrations](/developers/api-and-integrations/), then see [how FullFrame uses TYDAL](/developers/fullframe/).
+- **Use TYDAL or FullFrame:** the [user guides](/guides/) walk through each screen by role, from browsing the library to curating an exhibition.
 - **Understand the model:** read [About TYDAL](/about/) for resources, collections, workspaces and Vaults.
 
 ## Source and contribution

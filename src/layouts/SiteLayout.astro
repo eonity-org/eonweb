@@ -64,6 +64,14 @@ const ogImageAlt =
           <a href="/#platform">Platform</a>
           <a href="/#applications">Applications</a>
           <a
+            href="/guides/"
+            aria-current={
+              Astro.url.pathname.startsWith('/guides/') ? 'page' : undefined
+            }
+          >
+            Guides
+          </a>
+          <a
             href="/developers/"
             aria-current={
               Astro.url.pathname.startsWith('/developers/') ? 'page' : undefined
@@ -101,6 +109,7 @@ const ogImageAlt =
           <p>Structure your content. Open its possibilities.</p>
         </div>
         <div class="footer-links">
+          <a href="/guides/">User guides</a>
           <a href="/developers/">Developer docs</a>
           <a href="/about/">About the project</a>
           <a
