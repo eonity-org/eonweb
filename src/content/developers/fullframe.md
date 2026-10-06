@@ -44,7 +44,7 @@ _The curator’s studio once Drift is published. Close exhibition runs `close`. 
 
 These are supported operations on one Vault, authorized by its write key. The application does not need an organization-wide management token to publish an exhibition. See [Vault write methods](https://github.com/eonity-org/tydal/blob/main/docs/architecture/VAULT_WRITE_METHODS.md) for the detailed contract.
 
-For the same workflow from the user's side, see the [curator guide](https://github.com/eonity-org/fullframe/blob/main/docs/user-guide/curators.md) and [Setting up in TYDAL](https://github.com/eonity-org/fullframe/blob/main/docs/user-guide/setting-up-in-tydal.md), or all [user guides](/guides/).
+For the same workflow from the user's side, see the [curator guide](https://github.com/eonity-org/fullframe/blob/main/docs/user-guide/en/curators.md) and [Setting up in TYDAL](https://github.com/eonity-org/fullframe/blob/main/docs/user-guide/en/setting-up-in-tydal.md), or all [user guides](/guides/).
 
 ## Apply the pattern to your own client
 
