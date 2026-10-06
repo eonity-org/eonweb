@@ -4,6 +4,7 @@ description: Known issues, diagnostic steps and verified solutions.
 section: Reference
 order: 50
 status: ready
+updated: 2026-10-06
 ---
 
 ## Installation and service issues

@@ -10,6 +10,7 @@ const developers = defineCollection({
     section: z.string().default('Guides'),
     order: z.number().default(100),
     status: z.enum(['ready', 'planned']).default('planned'),
+    updated: z.coerce.date().optional(),
   }),
 });
 

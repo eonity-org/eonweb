@@ -3,6 +3,7 @@ layout: ../layouts/ContentLayout.astro
 title: Content with a context.
 description: TYDAL is the typed Digital Asset Layer for organizing, understanding, finding and delivering digital assets.
 label: About TYDAL
+updated: 2026-10-06
 ---
 
 TYDAL is an open-source Semantic Asset Platform. It combines digital asset management with configurable schemas, semantic search, AI enrichment and programmatic access, making content usable by people, applications and AI systems.
