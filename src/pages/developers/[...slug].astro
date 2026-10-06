@@ -1,6 +1,7 @@
 ---
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import SiteLayout from '../../layouts/SiteLayout.astro';
+import PageDate from '../../components/PageDate.astro';
 import '../../styles/developers.css';
 
 export async function getStaticPaths() {
@@ -87,6 +88,7 @@ const overview = page.id === 'index';
         <p class="eyebrow">{page.data.section}</p>
         <h1>{page.data.title}</h1>
         <p class="docs-description">{page.data.description}</p>
+        <PageDate date={page.data.updated} />
       </header>
       {page.data.status === 'planned' && (
         <div class="docs-notice">

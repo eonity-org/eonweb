@@ -3,6 +3,7 @@ layout: ../layouts/ContentLayout.astro
 title: User guides
 description: Step-by-step guides for the people who use TYDAL and FullFrame, organized by role, with screenshots of each screen.
 label: Using TYDAL
+updated: 2026-10-06
 ---
 
 These guides are for the people who **use** TYDAL and FullFrame: members who browse, upload and share resources, the administrators who look after an organization, and the curators, authors, jurors and visitors of an exhibition. They are maintained alongside the code in each product's repository, so they always match the latest release.

@@ -1,0 +1,22 @@
+---
+// Shows the `updated:` frontmatter date stamped by .githooks/pre-commit.
+interface Props {
+  date?: Date | string;
+}
+const { date } = Astro.props;
+const updated = date ? new Date(date) : undefined;
+---
+
+{updated && (
+  <p class="page-date">
+    Updated{' '}
+    <time datetime={updated.toISOString().slice(0, 10)}>
+      {updated.toLocaleDateString('en-GB', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+        timeZone: 'UTC',
+      })}
+    </time>
+  </p>
+)}

@@ -4,6 +4,7 @@ description: Visual guides to the interface and common development workflows.
 section: Reference
 order: 40
 status: ready
+updated: 2026-10-06
 ---
 
 Real captures from a local instance with demonstration content: TYDAL v1.2.0 and FullFrame v0.2.0, taken on 3 and 4 October 2026. Select an image to open it at full size.

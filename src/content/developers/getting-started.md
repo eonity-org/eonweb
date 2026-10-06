@@ -4,6 +4,7 @@ description: Prepare a development environment and run your first TYDAL instance
 section: Start here
 order: 10
 status: ready
+updated: 2026-10-06
 ---
 
 ## Run your own instance

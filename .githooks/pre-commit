@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Stamp today's date as `updated:` in the frontmatter of each staged Markdown page,
+# so the site shows when a page last changed rather than when it was deployed.
+# Enable once per clone: git config core.hooksPath .githooks
+today=$(date +%Y-%m-%d)
+git diff --cached --name-only --diff-filter=AM -z -- 'src/pages/*.md' 'src/content/*.md' |
+  while IFS= read -r -d '' file; do
+    perl -0pi -e '
+      s/\A(---\n.*?)^updated:[^\n]*\n/$1/ms;
+      s/\A(---\n.*?)^---\n/$1updated: '"$today"'\n---\n/ms;
+    ' "$file"
+    git add -- "$file"
+  done

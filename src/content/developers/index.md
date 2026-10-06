@@ -4,6 +4,7 @@ description: 'Start building with TYDAL: setup, schemas, API and MCP introductio
 section: Start here
 order: 0
 status: ready
+updated: 2026-10-06
 ---
 
 TYDAL is the typed Digital Asset Layer: schemas structure your resources, and Vaults expose selected content to people, applications and AI agents. These guides introduce the main paths into the platform and link to the maintained documentation in the [public TYDAL repository](https://github.com/eonity-org/tydal).

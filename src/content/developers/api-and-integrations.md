@@ -4,6 +4,7 @@ description: Reference material for repository APIs, Vault interfaces and MCP co
 section: Build and configure
 order: 30
 status: ready
+updated: 2026-10-06
 ---
 
 ## Build an application

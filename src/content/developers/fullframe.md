@@ -4,6 +4,7 @@ description: How a photography application uses TYDAL for resources, Vault acces
 section: Build and configure
 order: 35
 status: ready
+updated: 2026-10-06
 ---
 
 FullFrame is TYDAL's first standalone open-source client product. It turns a gallery Vault into a photography exhibition, adding visitor views, a curator studio and an optional jury. It demonstrates how an application can build on TYDAL's resource platform.
