@@ -27,14 +27,14 @@ TYDAL is where your organization's resources live: the library, the upload wizar
 
 ## FullFrame
 
-FullFrame turns photographs stored in TYDAL into an online exhibition, with an optional jury and invited authors. Each person sees a different part of it. Start with the [FullFrame user guide](https://github.com/eonity-org/fullframe/blob/main/docs/user-guide/README.md), or pick your role:
+FullFrame turns photographs stored in TYDAL into an online exhibition, with an optional jury and invited authors. Each person sees a different part of it. Start with the [FullFrame user guide](https://github.com/eonity-org/fullframe/blob/main/docs/user-guide/en/README.md), or pick your role:
 
-| Who                 | Guide                                                                                                           |
-| ------------------- | --------------------------------------------------------------------------------------------------------------- |
-| **Visitors**        | [Visiting an exhibition](https://github.com/eonity-org/fullframe/blob/main/docs/user-guide/visitors.md)         |
-| **Curators**        | [Curating an exhibition](https://github.com/eonity-org/fullframe/blob/main/docs/user-guide/curators.md)         |
-| **Invited authors** | [Sending your photographs](https://github.com/eonity-org/fullframe/blob/main/docs/user-guide/authors.md)        |
-| **Jurors**          | [Being on a jury](https://github.com/eonity-org/fullframe/blob/main/docs/user-guide/jurors.md)                  |
-| **Administrators**  | [Setting up in TYDAL](https://github.com/eonity-org/fullframe/blob/main/docs/user-guide/setting-up-in-tydal.md) |
+| Who                 | Guide                                                                                                              |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| **Visitors**        | [Visiting an exhibition](https://github.com/eonity-org/fullframe/blob/main/docs/user-guide/en/visitors.md)         |
+| **Curators**        | [Curating an exhibition](https://github.com/eonity-org/fullframe/blob/main/docs/user-guide/en/curators.md)         |
+| **Invited authors** | [Sending your photographs](https://github.com/eonity-org/fullframe/blob/main/docs/user-guide/en/authors.md)        |
+| **Jurors**          | [Being on a jury](https://github.com/eonity-org/fullframe/blob/main/docs/user-guide/en/jurors.md)                  |
+| **Administrators**  | [Setting up in TYDAL](https://github.com/eonity-org/fullframe/blob/main/docs/user-guide/en/setting-up-in-tydal.md) |
 
 For how FullFrame uses TYDAL under the hood, see [FullFrame: a client built on TYDAL](/developers/fullframe/).
