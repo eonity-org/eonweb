@@ -3,7 +3,7 @@ layout: ../layouts/ContentLayout.astro
 title: Content with a context.
 description: TYDAL is the typed Digital Asset Layer for organizing, understanding, finding and delivering digital assets.
 label: About TYDAL
-updated: 2026-10-06
+updated: 2026-10-07
 ---
 
 TYDAL is an open-source Semantic Asset Platform. It combines digital asset management with configurable schemas, semantic search, AI enrichment and programmatic access, making content usable by people, applications and AI systems.
@@ -59,3 +59,5 @@ The project is built for developers and early adopters. TYDAL is available under
 ## Build with us
 
 Explore the [TYDAL repository](https://github.com/eonity-org/tydal), read the [contribution guide](https://github.com/eonity-org/tydal/blob/main/docs/CONTRIBUTING.md), and follow [Eonity on X](https://x.com/eonity_org) for the project’s development.
+
+To get in touch with the team, write to [develop@eonity.org](mailto:develop@eonity.org).
