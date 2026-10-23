@@ -1,0 +1,390 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+const repo = 'https://github.com/eonity-org/tykerf';
+const docs = `${repo}/blob/main/docs`;
+const features = [
+  {
+    number: '01',
+    title: 'Edit on the real page.',
+    text: 'Open the page and press Edit with TYKERF. A floating panel shows the tree; select a block on the page or in the tree and edit its text, its code or its size, or ask Kaity to change it.',
+    detail: 'The editor over the page',
+    image: {
+      src: '/images/tykerf/editor.webp',
+      width: 1440,
+      height: 900,
+      alt: 'A page about Munich in TYKERF’s editor: the panel lists the page’s blocks (nav, intro, figures, history, tips, footer), with figures selected and its texts ready to edit.',
+    },
+  },
+  {
+    number: '02',
+    title: 'Manage the whole site.',
+    text: 'The site manager lists the pages and the links between them, broken ones first, with the code every page shares and the site’s icon. All the pages of a site share one theme.',
+    detail: 'Pages, links and shared code',
+    image: {
+      src: '/images/tykerf/site-manager.webp',
+      width: 1440,
+      height: 900,
+      alt: 'TYKERF’s site manager: a list of city pages (Amsterdam, Duisburg, London, Munich, Prague, Rome), each with its address and description, beside the styles and scripts shared by every page.',
+    },
+  },
+  {
+    number: '03',
+    title: 'Publish in one click.',
+    text: 'Send the site to a GitHub repository served by GitHub Pages, Cloudflare Pages or Netlify, one commit per publish. Or export a .zip, or let TYKERF serve the site with a sign-in to edit it.',
+    detail: 'GitHub · Cloudflare · Netlify · .zip',
+    image: {
+      src: '/images/tykerf/publish.webp',
+      width: 1440,
+      height: 900,
+      alt: 'TYKERF’s publish screen: the GitHub repository, branch, folder and the site’s address, with a Publish button, beside the site’s list of pages.',
+    },
+  },
+];
+const starts = [
+  {
+    number: '01',
+    label: 'Describe it',
+    title: 'Tell Kaity what you want.',
+    text: 'Write a sentence, or drop a screenshot, a sketch or a mock-up. Kaity picks a layout and a theme and builds the page while you watch.',
+  },
+  {
+    number: '02',
+    label: 'Copy a website',
+    title: 'Start from an address.',
+    text: 'TYKERF copies a page into named blocks, bringing its images and fonts along. Publish a copy only with its owner’s permission.',
+  },
+  {
+    number: '03',
+    label: 'Pick a layout',
+    title: 'Choose a structure.',
+    text: 'Start from a modern page layout and a theme preset, then change anything, block by block, or ask Kaity to fill it in.',
+  },
+];
+---
+
+<SiteLayout
+  title="TYKERF — Web pages, one block at a time."
+  description="TYKERF makes complex web pages understandable and editable. A page is a tree of named blocks; its AI, Kaity, changes one clearly scoped block at a time through validated, undoable moves."
+>
+  <section class="hero container" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <img
+        class="product-logo"
+        src="/brand/tykerf-logo.svg"
+        width="294"
+        height="87"
+        alt="TYKERF"
+      />
+      <p class="eyebrow">
+        <span class="status-dot status-dot-focus"></span>
+        <span>
+          <span class="eyebrow-category">Web pages · </span>Open source · early
+          access
+        </span>
+      </p>
+      <h1 id="hero-title">
+        Edit the web
+        <br />
+        <span>one block at a time.</span>
+      </h1>
+      <p class="hero-description">
+        TYKERF makes complex web pages understandable and editable. A page is
+        cut into rows and columns, down to named blocks of ordinary HTML. Every
+        change is a validated move on that tree, and every move can be undone.
+      </p>
+      <p class="hero-audience">
+        Kaity, its AI, can only change the block you select.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#see-it-work">
+          Watch Kaity build a page <span aria-hidden="true">→</span>
+        </a>
+        <a
+          class="text-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Opens in a new tab"
+          href={repo}
+        >
+          View on GitHub <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+    <figure class="knowledge-model slice-model">
+      <div class="model-header">
+        <span class="eyebrow">A page in TYKERF</span>
+        <span class="model-tag">header main V footer H</span>
+      </div>
+      <div class="slice-page" aria-hidden="true">
+        <span class="slice-block slice-header">header</span>
+        <span class="slice-block slice-nav">nav</span>
+        <span class="slice-block slice-focus">
+          hero<small>selected</small>
+        </span>
+        <span class="slice-block slice-a">facts</span>
+        <span class="slice-block slice-b">games</span>
+      </div>
+      <div class="slice-chat">
+        <span class="slice-chat-name">Kaity</span>
+        <p>
+          I can change <strong>hero</strong>: split it, move it, resize it or
+          rewrite it. The rest of the page stays as it is.
+        </p>
+      </div>
+      <figcaption>
+        Every block has a name, so you and the AI point at the same thing.
+        <span>Concept illustration</span>
+      </figcaption>
+    </figure>
+  </section>
+  <div class="principles-band">
+    <div class="container">
+      <span>
+        <i aria-hidden="true"></i> Open source
+      </span>
+      <span>Named blocks</span>
+      <span>Validated moves · undo</span>
+      <span>Editor · MCP · Claude</span>
+    </div>
+  </div>
+  <section
+    class="section container demo-section"
+    id="see-it-work"
+    aria-labelledby="demo-title"
+  >
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">See it in 3 minutes</p>
+        <h2 id="demo-title">
+          One sentence.
+          <br />
+          One page about Lisbon.
+        </h2>
+      </div>
+      <p>
+        On the start screen, one sentence asks for a joyful page about Lisbon.
+        Kaity builds it step by step, with facts, trivia, games and
+        illustrations, and looks at her work at desktop and phone widths.
+      </p>
+    </div>
+    <figure class="demo-figure demo-figure-wide">
+      <div class="demo-media demo-media-video">
+        <video
+          src="/tykerf-guides/videos/tykerf-builds-lisbon.mp4"
+          poster="/tykerf-guides/videos/tykerf-builds-lisbon.jpg"
+          width="1280"
+          height="720"
+          controls
+          playsinline
+          preload="none"
+          aria-label="Kaity, TYKERF's assistant, builds a page about Lisbon from one sentence, block by block, with facts, trivia, games and illustrations."
+        ></video>
+      </div>
+      <figcaption>
+        Kaity only gets TYKERF’s moves, with no file or shell access. Each block
+        keeps its own conversation, and the whole build can be undone step by
+        step (2:48, sped up).
+      </figcaption>
+    </figure>
+  </section>
+  <section
+    class="applications-section"
+    id="start"
+    aria-labelledby="start-title"
+  >
+    <div class="container section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Three ways to start a site</p>
+          <h2 id="start-title">
+            Describe it, copy it
+            <br />
+            or pick a layout.
+          </h2>
+        </div>
+        <p>
+          However a page starts, it ends up as the same tree of named blocks,
+          ready to edit by hand or with Kaity.
+        </p>
+      </div>
+      <div class="application-list start-list">
+        {starts.map((item) => (
+          <article class="application">
+            <div class="application-label">
+              <span class="number">{item.number}</span>
+              <span class="eyebrow">{item.label}</span>
+            </div>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section
+    class="section container"
+    id="features"
+    aria-labelledby="features-title"
+  >
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">From a page to a site</p>
+        <h2 id="features-title">
+          Understand the page.
+          <br />
+          Change it with confidence.
+        </h2>
+      </div>
+      <p>
+        The tree makes a complex page readable. Validated moves mean the layout
+        can’t be left broken, and the history keeps every step.
+      </p>
+    </div>
+    <div class="benefits">
+      {features.map((item) => (
+        <article>
+          <a
+            class="benefit-shot"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Opens in a new tab"
+            href={item.image.src}
+          >
+            <img
+              src={item.image.src}
+              width={item.image.width}
+              height={item.image.height}
+              alt={item.image.alt}
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <span class="number">{item.number}</span>
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+          <span class="benefit-detail">{item.detail}</span>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section
+    class="developer-section"
+    id="developers"
+    aria-labelledby="developers-title"
+  >
+    <div class="container developer-grid">
+      <div>
+        <p class="eyebrow">Your AI, your tools</p>
+        <h2 id="developers-title">
+          The same moves
+          <br />
+          for any MCP client.
+        </h2>
+        <p>
+          TYKERF runs on your computer with Claude Code, or with an Anthropic,
+          Anthropic-compatible or Gemini API key. Its MCP server offers the same
+          moves to Claude Desktop, Claude Code, Cowork and other MCP clients.
+        </p>
+        <a
+          class="button button-light"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Opens in a new tab"
+          href={`${docs}/developer-guide/README.md`}
+        >
+          Read the developer guide <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <div class="code-card">
+        <div class="code-header">
+          <span>
+            <i></i> Start a site
+          </span>
+          <button
+            class="copy-button"
+            type="button"
+            aria-label="Copy the commands"
+          >
+            Copy
+          </button>
+        </div>
+        <pre><code id="start-commands"><span class="code-muted"># Node.js 22 or later, in a clone of the repository</span>
+npm install
+npx playwright install chromium
+npm start -- <span class="code-string">my-site</span></code></pre>
+        <div class="code-bottom">
+          <span>Opens http://localhost:4400</span>
+          <span>Apache-2.0</span>
+        </div>
+        <p class="copy-status" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+  <section
+    class="section container open-source-section"
+    id="open-source"
+    aria-labelledby="open-title"
+  >
+    <div>
+      <p class="eyebrow">Built in the open</p>
+      <h2 id="open-title">
+        A kerf is the cut
+        <br />a saw leaves.
+      </h2>
+    </div>
+    <div>
+      <p>
+        TYKERF borrows the slicing floorplans of chip design and turns them into
+        a shared language for people and AI. Its TY connects it to the Eonity
+        family, next to TYDAL and the coming TYSET.
+      </p>
+      <p>
+        TYKERF is available under the{' '}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Opens in a new tab"
+          href={`${repo}/blob/main/LICENSE`}
+        >
+          Apache License 2.0
+        </a>
+        .
+      </p>
+      <a
+        class="text-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Opens in a new tab"
+        href={`${docs}/user-guide/README.md`}
+      >
+        Read the user guide <span aria-hidden="true">↗</span>
+      </a>
+      <p>
+        <a
+          class="text-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Opens in a new tab"
+          href={`${repo}/blob/main/ROADMAP.md`}
+        >
+          See the roadmap <span aria-hidden="true">↗</span>
+        </a>
+      </p>
+    </div>
+  </section>
+</SiteLayout>
+<script>
+  document
+    .querySelector<HTMLButtonElement>('.copy-button')
+    ?.addEventListener('click', async () => {
+      const source = document.querySelector('#start-commands')?.textContent;
+      const status = document.querySelector('.copy-status');
+      if (!source || !status) return;
+      try {
+        await navigator.clipboard.writeText(source);
+        status.textContent = 'Commands copied.';
+      } catch {
+        status.textContent = 'Select the commands above to copy them.';
+      }
+    });
+</script>

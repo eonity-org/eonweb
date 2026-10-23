@@ -1,5 +1,7 @@
 # Website scope
 
+> Updated 2026-10-23: eonity.org is now Eonity's family site. See “Current direction — 2026-10-23” below; the sections that follow describe TYDAL's page.
+
 ## Purpose
 
 Introduce TYDAL to developers and early adopters, explain the Semantic Asset Platform model, show applications and connect visitors to code and documentation.
@@ -33,6 +35,19 @@ DAM provides useful category context. Explain the added value through structure,
 Verified 2026-09-24: the product repository is https://github.com/eonity-org/tydal and TYDAL is licensed under Apache-2.0. Product links point directly there; website source/edit links continue to point to eonity-org/eonweb. Developer pages introduce each topic and link to maintained product guides rather than duplicating installation commands. The screenshot gallery remains planned until actual product images are available.
 
 ## Page plan
+
+### Current direction — 2026-10-23
+
+Eonity.org becomes the home of Eonity and its product family, superseding the TYDAL-only direction below. Eonity is driven by structure and meaning so that people and AI can work together with a human in the loop: each tool gives the AI a scope and a set of moves inside it.
+
+- **Brand:** the Eonity logo (`public/brand/eonity.png`) in the header, footer and share image. The “ty” symbol shared by Eonity and TYDAL stays as the favicon. Each product page shows its own logo in its hero; TYKERF's amber only marks the block in focus on its page.
+- **Home (`/`):** Eonity's message (“AI in a scope. You in the loop.”), a diagram of each tool's scope and moves, product cards from `src/data/products.ts`, the approach, demos of TYDAL and TYKERF, and open source.
+- **TYDAL (`/tydal/`, `/tydal/about/`):** the former home and About pages, unchanged in substance. The developer guides stay at `/developers/` so existing links keep working.
+- **TYKERF (`/tykerf/`):** the slicing tree, Kaity, the Lisbon video (kept at `/tykerf-guides/videos/tykerf-builds-lisbon.mp4`, which TYKERF's README links), the three ways to start, the editor, site manager and publishing, MCP, and links to its maintained guides.
+- **TYSET:** structured desktop publishing in the tradition of FrameMaker. A “Coming soon” card until its page is ready.
+- **About (`/about/`):** About Eonity.
+
+The plan below is kept for TYDAL's own page.
 
 ### Current direction — 2026-09-29
 

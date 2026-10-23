@@ -99,7 +99,7 @@ button:focus-visible {
 }
 .brand {
   display: inline-flex;
-  width: 119px;
+  width: 153px;
   flex-shrink: 0;
 }
 .brand img {
@@ -914,7 +914,7 @@ h3 {
   padding-bottom: 35px;
 }
 .footer-top .brand {
-  width: 94px;
+  width: 121px;
 }
 .footer-top p {
   font-size: 14px;
@@ -1066,7 +1066,7 @@ h3 {
     padding-block: 16px;
   }
   .brand {
-    width: 100px;
+    width: 129px;
   }
   .header-inner nav {
     order: 3;
@@ -1468,4 +1468,278 @@ h3 {
   margin-top: 0.75rem;
   color: var(--muted);
   font-size: 0.875rem;
+}
+
+/* Product pages and the Eonity home. */
+.product-logo {
+  display: block;
+  width: auto;
+  height: 52px;
+  margin-bottom: 26px;
+}
+.hero .status-dot-focus {
+  /* TYKERF's accent: the block in focus. */
+  background: #ea9a27;
+}
+.scope-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+.scope-row {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 4px 16px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+}
+.scope-row-coming {
+  background: transparent;
+  border-style: dashed;
+}
+.scope-product strong {
+  display: block;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.scope-product small,
+.scope-person small {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+}
+.scope-frame {
+  border: 2px solid var(--accent);
+  border-radius: 5px;
+  padding: 7px 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.scope-row-coming .scope-frame {
+  border-style: dashed;
+}
+.scope-label {
+  display: block;
+  font:
+    11px ui-monospace,
+    monospace;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+.scope-moves {
+  grid-column: 2;
+  font-size: 13px;
+  color: var(--muted);
+  padding-left: 2px;
+}
+.scope-person {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 16px 0 18px;
+  padding: 14px 18px;
+  border-radius: var(--radius);
+  background: var(--blue);
+  color: var(--on-dark);
+  font-weight: 600;
+}
+.scope-person small {
+  color: var(--on-dark-muted);
+  font-weight: 400;
+}
+.scope-person-icon {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 3px solid var(--on-dark-accent);
+  flex-shrink: 0;
+}
+.product-list .application {
+  grid-row: span 7;
+}
+.application-label .product-badge {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--blue);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+.product-card h3 {
+  margin-bottom: 14px;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+}
+.product-card-logo {
+  display: block;
+  width: auto;
+  height: 52px;
+}
+.product-wordmark {
+  font-size: 44px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--blue);
+}
+.application .product-tagline {
+  min-height: 0;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.product-soon {
+  margin-top: 20px;
+  padding-block: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent-text);
+}
+.start-list .application {
+  grid-row: span 3;
+}
+.demo-media-video {
+  aspect-ratio: 1280 / 720;
+  background: var(--blue-deep);
+}
+.demo-figure-wide {
+  max-width: 1040px;
+  margin-inline: auto;
+}
+.demo-figure-wide figcaption {
+  max-width: 720px;
+}
+.demo-figure figcaption strong {
+  color: var(--ink);
+}
+.inline-link {
+  display: inline-block;
+  margin-left: 4px;
+  color: var(--accent-text);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.slice-page {
+  display: grid;
+  grid-template-columns: 0.8fr 1.4fr 1fr;
+  grid-template-rows: 46px 150px 74px;
+  gap: 8px;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.slice-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--blue) 12%, white);
+  color: var(--blue);
+  font:
+    600 13px ui-monospace,
+    monospace;
+}
+.slice-header {
+  grid-column: 1 / -1;
+}
+.slice-nav {
+  grid-row: 2 / 4;
+}
+.slice-focus {
+  grid-column: 2 / 4;
+  background: color-mix(in srgb, #ea9a27 22%, white);
+  outline: 2px solid #ea9a27;
+  outline-offset: 2px;
+  color: color-mix(in srgb, #ea9a27 35%, black);
+}
+.slice-focus small {
+  font-weight: 400;
+  font-size: 11px;
+  margin-top: 2px;
+}
+.slice-chat {
+  margin: 16px 0 18px;
+  padding: 14px 18px;
+  background: var(--blue);
+  color: var(--on-dark);
+  border-radius: var(--radius);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.slice-chat-name {
+  display: block;
+  font:
+    12px ui-monospace,
+    monospace;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--on-dark-accent);
+  margin-bottom: 4px;
+}
+@media (max-width: 1100px) {
+  .product-logo {
+    margin-inline: auto;
+  }
+}
+@media (max-width: 800px) {
+  .product-logo,
+  .product-card-logo {
+    height: 44px;
+  }
+  .product-list .application + .application,
+  .start-list .application + .application {
+    margin-top: 35px;
+  }
+}
+@media (max-width: 480px) {
+  .scope-row {
+    grid-template-columns: 1fr;
+  }
+  .scope-moves {
+    grid-column: 1;
+  }
+  .slice-page {
+    grid-template-rows: 40px 120px 64px;
+  }
+}
+.prose table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin-block: 24px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.prose th,
+.prose td {
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+.prose th {
+  background: var(--surface);
+}
+/* On the home page both demos share the Drift video's proportions. */
+.demo-grid .demo-media-video {
+  aspect-ratio: 1226 / 940;
+}
+@media (max-width: 800px) {
+  .demo-grid .demo-media-video {
+    aspect-ratio: 1280 / 720;
+  }
 }

@@ -24,7 +24,7 @@
     "prettier-plugin-astro": "1.0.1",
     "typescript": "6.0.3"
   },
-  "description": "The TYDAL product website, built with Astro and TypeScript.",
+  "description": "The Eonity website for TYDAL, TYKERF and TYSET, built with Astro and TypeScript.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eonity-org/eonweb.git"

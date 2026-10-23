@@ -7,18 +7,22 @@ interface Props {
     description: string;
     label?: string;
     updated?: Date | string;
+    /** The product a page belongs to; its name ends the title and the back link returns to it. */
+    product?: string;
+    productHref?: string;
   };
 }
 const { frontmatter } = Astro.props;
+const owner = frontmatter.product ?? 'Eonity';
 ---
 
 <SiteLayout
-  title={`${frontmatter.title} — TYDAL`}
+  title={`${frontmatter.title} — ${owner}`}
   description={frontmatter.description}
 >
   <article class="container content-page">
-    <a class="text-link back-link" href="/">
-      ← Back to TYDAL
+    <a class="text-link back-link" href={frontmatter.productHref ?? '/'}>
+      ← Back to {owner}
     </a>
     <p class="eyebrow">{frontmatter.label ?? 'The project'}</p>
     <h1>{frontmatter.title}</h1>

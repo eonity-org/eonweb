@@ -1,63 +1,47 @@
 ---
 layout: ../layouts/ContentLayout.astro
-title: Content with a context.
-description: TYDAL is the typed Digital Asset Layer for organizing, understanding, finding and delivering digital assets.
-label: About TYDAL
-updated: 2026-10-07
+title: Structure and meaning for people and AI.
+description: Eonity builds open-source tools that give AI a clear scope to work in, so people and AI can work on the same content together, with people in the loop.
+label: About Eonity
+updated: 2026-10-23
 ---
 
-TYDAL is an open-source Semantic Asset Platform. It combines digital asset management with configurable schemas, semantic search, AI enrichment and programmatic access, making content usable by people, applications and AI systems.
+AI can do real work on content: describe a collection, build a page, lay out a document. It does that work best when it knows what it is working on and where its work ends. Eonity's tools make both explicit.
 
-## The typed Digital Asset Layer
+## Structure and meaning
 
-The **DAL** in **TYDAL** stands for **Digital Asset Layer**. The **TY** prefix connects it to the broader TY / Eonity product family.
+Every Eonity tool starts from structure. In **TYDAL**, schemas define what a resource is, how it is described and how it is found. In **TYKERF**, a web page is a tree of named blocks. In **TYSET**, a document will have its own structure, part by part and page by page.
 
-“Layer” describes TYDAL’s role between digital assets and the people, applications and AI systems that use them. It brings together structure, metadata, relationships and AI enrichment to help organize, understand, find and deliver those assets.
+Structure gives content a meaning that people and AI can both read. When a person and an AI point at the same named thing, they can talk about it, change it and check the result.
 
-**Typed** means schemas define resource fields, validation and search behavior. The same structure guides forms, filters and indexing.
+## A scope for the AI
 
-Digital assets extend beyond images, audio and video. Documents, datasets, Markdown, source code and combinations of these files can all be resources in TYDAL. A learning resource, for example, might bring together a lesson, illustrations and supporting data. Its schema defines how those parts are described, processed and indexed.
+Each tool gives the AI a defined area to work in and the moves it may make there:
 
-## The model
+| Tool       | Content        | The AI's scope       | Its moves                         |
+| ---------- | -------------- | -------------------- | --------------------------------- |
+| **TYDAL**  | Digital assets | A Vault              | Read, search and propose metadata |
+| **TYKERF** | Web pages      | A block of a page    | Split, move, resize and rewrite   |
+| **TYSET**  | Documents      | A part of a document | Write, restructure and lay out    |
 
-**The TYDAL repository** is the core: it holds and organizes your resources, their files and their semantic structure.
+The tools offer these moves through MCP, so Claude and other AI clients get the same scoped tools the products use themselves.
 
-**Resources** are the fundamental objects in the repository. A resource can contain a single file, several related components, or a canonical asset with supporting files and representations. Metadata and relationships describe the resource as a whole.
+## People in the loop
 
-**Collections and schemas** define how different kinds of resources are described, validated, processed and indexed. Schemas specify metadata fields, file roles and indexing rules, so the structure fits the content.
+The AI proposes; people decide. TYDAL's AI suggestions can be reviewed before they are applied. Every TYKERF move is validated before it changes the page, and every change can be undone step by step. The same principle will guide TYSET.
 
-**Workspaces** let you curate selections of resources for a task or a project. Vaults can expose those selections to their intended audiences.
+## The tools
 
-**Vaults** are contextual views of selected resources, with their own presentation and access rules. The source stays in the repository and can serve multiple Vaults without duplicating the underlying asset. Vault interfaces support delivery, search and permitted AI interactions.
+- **[TYDAL](/tydal/)**, the typed Digital Asset Layer, organizes, enriches and shares digital resources through Vaults. Read [About TYDAL](/tydal/about/) for its model. [FullFrame](/developers/fullframe/), a photography exhibition client, is built on it.
+- **[TYKERF](/tykerf/)** makes complex web pages understandable and editable, and lets AI change one clearly scoped block at a time.
+- **TYSET** brings the same approach to desktop publishing, in the tradition of structured authoring tools like FrameMaker. It arrives in the coming weeks.
 
-**Experiences** make use of those Vaults: exhibitions, knowledge spaces, AI connections and applications built through the API.
+The **TY** in their names comes from Eoni**ty** and marks them as one family.
 
-## Find resources by meaning
+## Open source
 
-TYDAL combines metadata filters and full-text search with embeddings and vector similarity. This helps people find relevant resources even when their query uses different words from the original content. Relationships provide another route to related material.
+Eonity's tools are open source under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). The code lives in the [eonity-org organization on GitHub](https://github.com/eonity-org). They are built for developers and early adopters; services, support, implementation and hosted capabilities can support their development.
 
-Schemas define structure and meaning; embeddings provide signals for retrieval. Indexing rules determine which information contributes to search and how it is represented.
+## Get in touch
 
-## AI for enrichment and exploration
-
-AI enrichment can suggest descriptions, tags, classifications and other metadata. Suggestions can be reviewed before they are applied, with configurable approval rules for batch workflows.
-
-**Ask AI** provides conversational access to resources in context. **Organization MCP** lets authorized agents manage resources and curate workspaces. **Vault MCP** connects an external AI client to one Vault: read-only by default, with supported write operations enabled through a write key. See [API and integrations](/developers/api-and-integrations/) to choose a connection.
-
-## Build on the layer
-
-The management API works with the repository's resources, collections and workspaces. Vault interfaces expose selected content to consuming applications. This supports galleries, knowledge spaces, learning tools and AI clients built around the same canonical resources.
-
-Resources can be delivered through different Vault links and CDN configurations. The event model records resource operations to support auditing and provenance.
-
-## An Eonity project
-
-Eonity is an umbrella for open-source work in education, content and data management. TYDAL is its foundation for bringing structure and meaning to digital assets.
-
-The project is built for developers and early adopters. TYDAL is available under the [Apache License 2.0](https://github.com/eonity-org/tydal/blob/main/LICENSE). Services, support, implementation and hosted capabilities can support its development.
-
-## Build with us
-
-Explore the [TYDAL repository](https://github.com/eonity-org/tydal), read the [contribution guide](https://github.com/eonity-org/tydal/blob/main/docs/CONTRIBUTING.md), and follow [Eonity on X](https://x.com/eonity_org) for the project’s development.
-
-To get in touch with the team, write to [develop@eonity.org](mailto:develop@eonity.org).
+Follow [Eonity on X](https://x.com/eonity_org) for the projects' development, or write to [develop@eonity.org](mailto:develop@eonity.org).

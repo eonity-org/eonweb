@@ -1,18 +1,22 @@
 # eonweb
 
-The product website for **TYDAL**, the open-source typed Digital Asset Layer developed under **Eonity**. Semantic Asset Platform describes its product category.
+The website of **Eonity** and its open-source tools, published at **https://eonity.org**.
 
-The [TYDAL product repository](https://github.com/eonity-org/tydal) is public and licensed under Apache-2.0.
+> Structure and meaning for people and AI.
 
-> Control your knowledge flow.
+Eonity builds tools that give AI a clear scope to work in while people stay in the loop:
 
-The public home is **https://eonity.org**. This repository contains the website only. It does not contain the TYDAL backend or the separately planned MCP publishing client.
+- **[TYDAL](https://github.com/eonity-org/tydal)**, the typed Digital Asset Layer, with [FullFrame](https://github.com/eonity-org/fullframe) as its first client (`/tydal/`).
+- **[TYKERF](https://github.com/eonity-org/tykerf)**, web pages edited one named block at a time (`/tykerf/`).
+- **TYSET**, structured desktop publishing, coming soon (shown as a card on the home page).
+
+This repository contains the website only. The products are separate repositories, each licensed under Apache-2.0.
 
 ## Status
 
-Published at eonity.org through GitHub Pages. The homepage, About page and developer guides introduce TYDAL, with FullFrame documented as its first standalone open-source client product. The homepage Vault diagram is an interactive concept illustration, not a live TYDAL connection.
+Published at eonity.org through GitHub Pages. The home page introduces Eonity and its tools; each product has its own page, and About explains Eonity's approach. The TYDAL developer guides stay at `/developers/`, and the user guides at `/guides/` cover TYDAL, FullFrame and TYKERF. The diagrams on the home, TYDAL and TYKERF pages are concept illustrations, not live connections.
 
-Eonity.org remains TYDAL's product and developer home. A separate domain for a future demonstrator is still being decided. The project's social account is [@eonity_org on X](https://x.com/eonity_org). FullFrame is an integration example within the broader platform story.
+The products shown on the home page come from `src/data/products.ts`: a new product is one entry there plus its page under `src/pages/<id>/`. The project's social account is [@eonity_org on X](https://x.com/eonity_org).
 
 ## Stack
 

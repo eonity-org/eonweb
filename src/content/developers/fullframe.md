@@ -9,7 +9,7 @@ updated: 2026-10-06
 
 FullFrame is TYDAL's first standalone open-source client product. It turns a gallery Vault into a photography exhibition, adding visitor views, a curator studio and an optional jury. It demonstrates how an application can build on TYDAL's resource platform.
 
-TYDAL also supports documents, datasets, code and composite resources. Photography is one use of the same model: structure resources with schemas, curate them in workspaces and expose them through Vaults for people, applications and AI agents. Start with [the TYDAL model](/about/#the-model) for the broader picture.
+TYDAL also supports documents, datasets, code and composite resources. Photography is one use of the same model: structure resources with schemas, curate them in workspaces and expose them through Vaults for people, applications and AI agents. Start with [the TYDAL model](/tydal/about/#the-model) for the broader picture.
 
 [![Drift’s entrance in FullFrame: the title, the tagline “The slow seconds between sky and ground”, a short description and an “Enter the exhibition” button beside the cover photograph of a parachutist landing.](/images/drift-entrance.webp)](/images/drift-entrance.webp)
 

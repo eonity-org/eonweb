@@ -1,14 +1,14 @@
 ---
 layout: ../layouts/ContentLayout.astro
 title: User guides
-description: Step-by-step guides for the people who use TYDAL and FullFrame, organized by role, with screenshots of each screen.
-label: Using TYDAL
-updated: 2026-10-06
+description: Step-by-step guides for the people who use TYDAL, FullFrame and TYKERF, organized by role or task, with screenshots of each screen.
+label: Using the tools
+updated: 2026-10-23
 ---
 
-These guides are for the people who **use** TYDAL and FullFrame: members who browse, upload and share resources, the administrators who look after an organization, and the curators, authors, jurors and visitors of an exhibition. They are maintained alongside the code in each product's repository, so they always match the latest release.
+These guides are for the people who **use** TYDAL, FullFrame and TYKERF: members who browse, upload and share resources, the administrators who look after an organization, and the curators, authors, jurors and visitors of an exhibition, and the people who build web pages with TYKERF. They are maintained alongside the code in each product's repository, so they always match the latest release.
 
-To install, configure or build on TYDAL, see the [developer documentation](/developers/).
+To install, configure or build on TYDAL, see the [developer documentation](/developers/). For TYKERF, see its [developer guide](https://github.com/eonity-org/tykerf/blob/main/docs/developer-guide/README.md).
 
 ## TYDAL
 
@@ -39,3 +39,19 @@ FullFrame turns photographs stored in TYDAL into an online exhibition, with an o
 | **Administrators**  | [Setting up in TYDAL](https://github.com/eonity-org/fullframe/blob/main/docs/user-guide/en/setting-up-in-tydal.md) |
 
 For how FullFrame uses TYDAL under the hood, see [FullFrame: a client built on TYDAL](/developers/fullframe/).
+
+## TYKERF
+
+TYKERF builds and edits web pages block by block, by hand or with Kaity, its AI. Start with [Why TYKERF](https://github.com/eonity-org/tykerf/blob/main/docs/user-guide/en/why-tykerf.md) and the [TYKERF user guide](https://github.com/eonity-org/tykerf/blob/main/docs/user-guide/README.md), or pick a task:
+
+| Task                   | Guide                                                                                                                                                                                                               |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Start a site**       | [Getting started](https://github.com/eonity-org/tykerf/blob/main/docs/user-guide/en/getting-started.md)                                                                                                             |
+| **Edit a page**        | [Editing a page](https://github.com/eonity-org/tykerf/blob/main/docs/user-guide/en/editor.md)                                                                                                                       |
+| **Work with Kaity**    | [Working with the AI](https://github.com/eonity-org/tykerf/blob/main/docs/user-guide/en/ai.md) and [getting good results](https://github.com/eonity-org/tykerf/blob/main/docs/user-guide/en/asking-kaity.md)        |
+| **Copy a website**     | [Copying a website](https://github.com/eonity-org/tykerf/blob/main/docs/user-guide/en/importing.md)                                                                                                                 |
+| **Manage the site**    | [Your site](https://github.com/eonity-org/tykerf/blob/main/docs/user-guide/en/sites.md)                                                                                                                             |
+| **Publish**            | [Publishing and serving](https://github.com/eonity-org/tykerf/blob/main/docs/user-guide/en/publishing.md)                                                                                                           |
+| **Use it from Claude** | [Claude Desktop](https://github.com/eonity-org/tykerf/blob/main/docs/user-guide/en/claude-desktop.md), [Claude Code and Cowork](https://github.com/eonity-org/tykerf/blob/main/docs/user-guide/en/claude-plugin.md) |
+
+To watch TYKERF at work first, see [Kaity build a page about Lisbon](/tykerf/#see-it-work).

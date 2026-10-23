@@ -7,13 +7,16 @@ interface Props {
   description?: string;
 }
 const {
-  title = 'TYDAL — Control your knowledge flow.',
-  description = 'TYDAL is the open-source typed Digital Asset Layer. Structure, enrich and share digital resources through contextual Vaults for people, applications and AI agents.',
+  title = 'Eonity — Structure and meaning for people and AI.',
+  description = 'Eonity builds open-source tools that give AI a clear scope to work in: TYDAL for digital assets, TYKERF for web pages and, soon, TYSET for documents. People stay in the loop.',
 } = Astro.props;
+const path = Astro.url.pathname;
+const current = (prefix: string) =>
+  path.startsWith(prefix) ? 'page' : undefined;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL('/og-image.png', Astro.site);
 const ogImageAlt =
-  'The tydal logo above the line “Control your knowledge flow.” and “Your content. Your structure. Your choice of AI.”';
+  'The eonity logo above the line “Structure and meaning for people and AI.” and the names TYDAL, TYKERF and TYSET.';
 ---
 
 <!doctype html>
@@ -35,7 +38,7 @@ const ogImageAlt =
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:site_name" content="TYDAL" />
+    <meta property="og:site_name" content="Eonity" />
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -52,41 +55,37 @@ const ogImageAlt =
     </a>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="/" aria-label="TYDAL home">
+        <a class="brand" href="/" aria-label="Eonity home">
           <img
-            src="/brand/tydal.png?v=20261003-srgb"
-            width="315"
+            src="/brand/eonity.png?v=20261023"
+            width="405"
             height="140"
-            alt="TYDAL"
+            alt="Eonity"
           />
         </a>
         <nav aria-label="Main navigation">
-          <a href="/#platform">Platform</a>
-          <a href="/#applications">Applications</a>
-          <a
-            href="/guides/"
-            aria-current={
-              Astro.url.pathname.startsWith('/guides/') ? 'page' : undefined
-            }
-          >
+          <a href="/tydal/" aria-current={current('/tydal/')}>
+            TYDAL
+          </a>
+          <a href="/tykerf/" aria-current={current('/tykerf/')}>
+            TYKERF
+          </a>
+          <a href="/guides/" aria-current={current('/guides/')}>
             Guides
           </a>
-          <a
-            href="/developers/"
-            aria-current={
-              Astro.url.pathname.startsWith('/developers/') ? 'page' : undefined
-            }
-          >
+          <a href="/developers/" aria-current={current('/developers/')}>
             Developers
           </a>
-          <a href="/#open-source">Open source</a>
+          <a href="/about/" aria-current={current('/about/')}>
+            About
+          </a>
         </nav>
         <a
           class="header-github"
           target="_blank"
           rel="noopener noreferrer"
           title="Opens in a new tab"
-          href="https://github.com/eonity-org/tydal"
+          href="https://github.com/eonity-org"
         >
           GitHub <span aria-hidden="true">↗</span>
         </a>
@@ -98,25 +97,27 @@ const ogImageAlt =
     <footer class="site-footer">
       <div class="container footer-top">
         <div>
-          <a class="brand" href="/" aria-label="TYDAL home">
+          <a class="brand" href="/" aria-label="Eonity home">
             <img
-              src="/brand/tydal.png?v=20261003-srgb"
-              width="315"
+              src="/brand/eonity.png?v=20261023"
+              width="405"
               height="140"
-              alt="TYDAL"
+              alt="Eonity"
             />
           </a>
-          <p>Structure your content. Open its possibilities.</p>
+          <p>Structure and meaning for people and AI.</p>
         </div>
         <div class="footer-links">
+          <a href="/tydal/">TYDAL</a>
+          <a href="/tykerf/">TYKERF</a>
           <a href="/guides/">User guides</a>
           <a href="/developers/">Developer docs</a>
-          <a href="/about/">About the project</a>
+          <a href="/about/">About Eonity</a>
           <a
             target="_blank"
             rel="noopener noreferrer"
             title="Opens in a new tab"
-            href="https://github.com/eonity-org/tydal"
+            href="https://github.com/eonity-org"
           >
             GitHub <ExternalArrow />
           </a>
@@ -133,15 +134,14 @@ const ogImageAlt =
       </div>
       <div class="container footer-bottom">
         <span>
-          © 2026 <a href="/about/#an-eonity-project">Eonity</a>. An open-source
-          project.{' '}
+          © 2026 <a href="/about/">Eonity</a>. Open-source projects under the{' '}
           <a
             target="_blank"
             rel="noopener noreferrer"
             title="Opens in a new tab"
-            href="https://github.com/eonity-org/tydal/blob/main/LICENSE"
+            href="https://www.apache.org/licenses/LICENSE-2.0"
           >
-            Apache-2.0
+            Apache License 2.0
           </a>
           .
         </span>
