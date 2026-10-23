@@ -283,7 +283,9 @@ const starts = [
         <p>
           TYKERF runs on your computer with Claude Code, or with an Anthropic,
           Anthropic-compatible or Gemini API key. Its MCP server offers the same
-          moves to Claude Desktop, Claude Code, Cowork and other MCP clients.
+          moves to Claude Desktop, Claude Code, Cowork and other MCP clients. In
+          Claude Code and Cowork it comes as a plugin, from TYKERF's own
+          marketplace.
         </p>
         <a
           class="button button-light"
@@ -295,28 +297,61 @@ const starts = [
           Read the developer guide <span aria-hidden="true">↗</span>
         </a>
       </div>
-      <div class="code-card">
-        <div class="code-header">
-          <span>
-            <i></i> Start a site
-          </span>
-          <button
-            class="copy-button"
-            type="button"
-            aria-label="Copy the commands"
-          >
-            Copy
-          </button>
-        </div>
-        <pre><code id="start-commands"><span class="code-muted"># Node.js 22 or later, in a clone of the repository</span>
+      <div class="code-cards">
+        <div class="code-card">
+          <div class="code-header">
+            <span>
+              <i></i> Start a site
+            </span>
+            <button
+              class="copy-button"
+              type="button"
+              data-copy="#start-commands"
+              aria-label="Copy the commands"
+            >
+              Copy
+            </button>
+          </div>
+          <pre><code id="start-commands"><span class="code-muted"># Node.js 22 or later, in a clone of the repository</span>
 npm install
 npx playwright install chromium
 npm start -- <span class="code-string">my-site</span></code></pre>
-        <div class="code-bottom">
-          <span>Opens http://localhost:4400</span>
-          <span>Apache-2.0</span>
+          <div class="code-bottom">
+            <span>Opens http://localhost:4400</span>
+            <span>Apache-2.0</span>
+          </div>
+          <p class="copy-status" aria-live="polite"></p>
         </div>
-        <p class="copy-status" aria-live="polite"></p>
+        <div class="code-card">
+          <div class="code-header">
+            <span>
+              <i></i> Add it to Claude Code
+            </span>
+            <button
+              class="copy-button"
+              type="button"
+              data-copy="#plugin-commands"
+              aria-label="Copy the commands"
+            >
+              Copy
+            </button>
+          </div>
+          <pre><code id="plugin-commands"><span class="code-muted"># Node.js 20 or later; or /plugin in a session</span>
+claude plugin marketplace add <span class="code-string">eonity-org/tykerf</span>
+claude plugin install <span class="code-string">tykerf@eonity.org</span></code></pre>
+          <div class="code-bottom">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Opens in a new tab"
+              href={`${docs}/user-guide/en/claude-plugin.md`}
+            >
+              Cowork, Claude Desktop and more <span aria-hidden="true">↗</span>
+            </a>
+            <span>Plugin</span>
+          </div>
+          <p class="copy-status" aria-live="polite"></p>
+        </div>
       </div>
     </div>
   </section>
@@ -374,17 +409,24 @@ npm start -- <span class="code-string">my-site</span></code></pre>
   </section>
 </SiteLayout>
 <script>
+  // each card's Copy button copies the commands it names, and answers in its own card
   document
-    .querySelector<HTMLButtonElement>('.copy-button')
-    ?.addEventListener('click', async () => {
-      const source = document.querySelector('#start-commands')?.textContent;
-      const status = document.querySelector('.copy-status');
-      if (!source || !status) return;
-      try {
-        await navigator.clipboard.writeText(source);
-        status.textContent = 'Commands copied.';
-      } catch {
-        status.textContent = 'Select the commands above to copy them.';
-      }
-    });
+    .querySelectorAll<HTMLButtonElement>('.copy-button[data-copy]')
+    .forEach((button) =>
+      button.addEventListener('click', async () => {
+        const source = document.querySelector(
+          button.dataset.copy!,
+        )?.textContent;
+        const status = button
+          .closest('.code-card')
+          ?.querySelector('.copy-status');
+        if (!source || !status) return;
+        try {
+          await navigator.clipboard.writeText(source);
+          status.textContent = 'Commands copied.';
+        } catch {
+          status.textContent = 'Select the commands above to copy them.';
+        }
+      }),
+    );
 </script>
