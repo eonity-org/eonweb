@@ -8,7 +8,7 @@ interface Props {
 }
 const {
   title = 'Eonity — Structure and meaning for people and AI.',
-  description = 'Eonity builds open-source tools that give AI a clear scope to work in: TYDAL for digital assets, TYKERF for web pages and, soon, Tyset for documents. People stay in the loop.',
+  description = 'Eonity builds open-source tools that give AI a clear scope to work in: TYDAL for digital assets, TYKERF for web pages and, soon, TYSET for documents. People stay in the loop.',
 } = Astro.props;
 const path = Astro.url.pathname;
 const current = (prefix: string) =>
@@ -16,7 +16,7 @@ const current = (prefix: string) =>
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL('/og-image.png', Astro.site);
 const ogImageAlt =
-  'The eonity logo above the line “Structure and meaning for people and AI.” above the TYDAL, TYKERF and Tyset logos.';
+  'The eonity logo above the line “Structure and meaning for people and AI.” above the TYDAL, TYKERF and TYSET logos.';
 ---
 
 <!doctype html>

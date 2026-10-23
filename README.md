@@ -8,7 +8,7 @@ Eonity builds tools that give AI a clear scope to work in while people stay in t
 
 - **[TYDAL](https://github.com/eonity-org/tydal)**, the typed Digital Asset Layer, with [FullFrame](https://github.com/eonity-org/fullframe) as its first client (`/tydal/`).
 - **[TYKERF](https://github.com/eonity-org/tykerf)**, web pages edited one named block at a time (`/tykerf/`).
-- **Tyset**, structured desktop publishing, coming soon (shown as a card on the home page).
+- **TYSET**, structured desktop publishing, coming soon (shown as a card on the home page).
 
 This repository contains the website only. The products are separate repositories, each licensed under Apache-2.0.
 

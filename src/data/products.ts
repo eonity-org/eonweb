@@ -47,7 +47,7 @@ export const products: Product[] = [
   },
   {
     id: 'tyset',
-    name: 'Tyset',
+    name: 'TYSET',
     status: 'coming',
     category: 'Documents',
     tagline: 'Structured desktop publishing.',

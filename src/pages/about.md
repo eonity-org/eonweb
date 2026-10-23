@@ -10,7 +10,7 @@ AI can do real work on content: describe a collection, build a page, lay out a d
 
 ## Structure and meaning
 
-Every Eonity tool starts from structure. In **TYDAL**, schemas define what a resource is, how it is described and how it is found. In **TYKERF**, a web page is a tree of named blocks. In **Tyset**, a document's text flows through the frames of master pages, and every format comes from a catalog.
+Every Eonity tool starts from structure. In **TYDAL**, schemas define what a resource is, how it is described and how it is found. In **TYKERF**, a web page is a tree of named blocks. In **TYSET**, a document's text flows through the frames of master pages, and every format comes from a catalog.
 
 Structure gives content a meaning that people and AI can both read. When a person and an AI point at the same named thing, they can talk about it, change it and check the result.
 
@@ -22,19 +22,19 @@ Each tool gives the AI a defined area to work in and the moves it may make there
 | ---------- | -------------- | ----------------------- | --------------------------------- |
 | **TYDAL**  | Digital assets | A Vault                 | Read, search and propose metadata |
 | **TYKERF** | Web pages      | A block of a page       | Split, move, resize and rewrite   |
-| **Tyset**  | Documents      | A section of a document | Write, format and restructure     |
+| **TYSET**  | Documents      | A section of a document | Write, format and restructure     |
 
 The tools offer these moves through MCP, so Claude and other AI clients get the same scoped tools the products use themselves.
 
 ## People in the loop
 
-The AI proposes; people decide. TYDAL's AI suggestions can be reviewed before they are applied. Every TYKERF move is validated before it changes the page, and every change can be undone step by step. The same principle will guide Tyset.
+The AI proposes; people decide. TYDAL's AI suggestions can be reviewed before they are applied. Every TYKERF move is validated before it changes the page, and every change can be undone step by step. The same principle will guide TYSET.
 
 ## The tools
 
 - **[TYDAL](/tydal/)**, the typed Digital Asset Layer, organizes, enriches and shares digital resources through Vaults. Read [About TYDAL](/tydal/about/) for its model. [FullFrame](/developers/fullframe/), a photography exhibition client, is built on it.
 - **[TYKERF](/tykerf/)** makes complex web pages understandable and editable, and lets AI change one clearly scoped block at a time.
-- **Tyset** brings the same approach to desktop publishing. It is a document editor in which text flows through the frames of master pages and the AI writes and edits one section at a time. It arrives in the coming weeks.
+- **TYSET** brings the same approach to desktop publishing. It is a document editor in which text flows through the frames of master pages and the AI writes and edits one section at a time. It arrives in the coming weeks.
 
 The **TY** in their names comes from Eoni**ty** and marks them as one family.
 
