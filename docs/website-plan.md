@@ -44,7 +44,7 @@ Eonity.org becomes the home of Eonity and its product family, superseding the TY
 - **Home (`/`):** Eonity's message (“AI in a scope. You in the loop.”), a diagram of each tool's scope and moves, product cards from `src/data/products.ts`, the approach, demos of TYDAL and TYKERF, and open source.
 - **TYDAL (`/tydal/`, `/tydal/about/`):** the former home and About pages, unchanged in substance. The developer guides stay at `/developers/` so existing links keep working.
 - **TYKERF (`/tykerf/`):** the slicing tree, Kaity, the Lisbon video (kept at `/tykerf-guides/videos/tykerf-builds-lisbon.mp4`, which TYKERF's README links), the three ways to start, the editor, site manager and publishing, MCP, and links to its maintained guides.
-- **TYSET:** structured desktop publishing in the tradition of FrameMaker. A “Coming soon” card until its page is ready.
+- **Tyset** (written “Tyset” in sentences, per its BRAND.md): structured desktop publishing, with text flowing through the frames of master pages and the AI working on one section at a time. A “Coming soon” card with its logo until its page is ready. Don't mention FrameMaker on the site.
 - **About (`/about/`):** About Eonity.
 
 The plan below is kept for TYDAL's own page.

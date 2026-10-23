@@ -99,7 +99,7 @@ button:focus-visible {
 }
 .brand {
   display: inline-flex;
-  width: 153px;
+  width: 128px;
   flex-shrink: 0;
 }
 .brand img {
@@ -914,7 +914,7 @@ h3 {
   padding-bottom: 35px;
 }
 .footer-top .brand {
-  width: 121px;
+  width: 104px;
 }
 .footer-top p {
   font-size: 14px;
@@ -1066,7 +1066,7 @@ h3 {
     padding-block: 16px;
   }
   .brand {
-    width: 129px;
+    width: 110px;
   }
   .header-inner nav {
     order: 3;

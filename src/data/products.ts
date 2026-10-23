@@ -29,7 +29,7 @@ export const products: Product[] = [
     moves: 'Read, search and propose metadata',
     href: '/tydal/',
     github: 'https://github.com/eonity-org/tydal',
-    logo: { src: '/brand/tydal.png?v=20261003-srgb', width: 315, height: 140 },
+    logo: { src: '/brand/tydal-logo.svg', width: 294, height: 118 },
   },
   {
     id: 'tykerf',
@@ -47,13 +47,14 @@ export const products: Product[] = [
   },
   {
     id: 'tyset',
-    name: 'TYSET',
+    name: 'Tyset',
     status: 'coming',
     category: 'Documents',
     tagline: 'Structured desktop publishing.',
     description:
-      'The same approach for documents laid out page by page, in the tradition of structured authoring tools like FrameMaker. The AI works on one part of the document while you keep the final say.',
-    scope: 'A part of a document',
-    moves: 'Write, restructure and lay out',
+      'A document editor for structured publishing: text flows through the frames of master pages, and every format comes from a catalog. The AI writes and edits one section at a time through validated operations.',
+    scope: 'A section of a document',
+    moves: 'Write, format and restructure',
+    logo: { src: '/brand/tyset-logo.svg', width: 224, height: 69 },
   },
 ];
