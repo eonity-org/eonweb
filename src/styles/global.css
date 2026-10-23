@@ -872,6 +872,17 @@ h3 {
   font-size: 12px;
   color: var(--on-dark-muted);
 }
+.code-cards {
+  display: grid;
+  gap: 22px;
+  min-width: 0;
+}
+.code-bottom a {
+  color: var(--on-dark);
+}
+.code-bottom a:hover {
+  color: var(--on-dark-accent);
+}
 .code-card .copy-status {
   font-size: 13px;
   margin: 0;
