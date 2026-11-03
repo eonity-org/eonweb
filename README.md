@@ -2,13 +2,13 @@
 
 The website of **Eonity** and its open-source tools, published at **https://eonity.org**.
 
-> Structure and meaning for people and AI.
+> People and AI, working together.
 
-Eonity builds tools that give AI a clear scope to work in while people stay in the loop:
+Eonity builds open-source tools in which people and AI work together on structured content, with a clear scope for the AI and people in the loop:
 
-- **[TYDAL](https://github.com/eonity-org/tydal)**, the typed Digital Asset Layer, with [FullFrame](https://github.com/eonity-org/fullframe) as its first client (`/tydal/`).
+- **[TYDAL](https://github.com/eonity-org/tydal)**, the typed Digital Asset Layer, with [FullFrame](https://github.com/eonity-org/fullframe) shown as an external example client (`/tydal/`).
 - **[TYKERF](https://github.com/eonity-org/tykerf)**, web pages edited one named block at a time (`/tykerf/`).
-- **TYSET**, structured desktop publishing, coming soon (shown as a card on the home page).
+- **TYSET**, structured desktop publishing compatible with Adobe FrameMaker MIF files, for reviewing, correcting and translating documents; coming in a few weeks (`/tyset/`).
 
 This repository contains the website only. The products are separate repositories, each licensed under Apache-2.0.
 

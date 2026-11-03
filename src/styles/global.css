@@ -1754,3 +1754,7 @@ h3 {
     aspect-ratio: 1280 / 720;
   }
 }
+.trademark-note {
+  font-size: 13px;
+  color: var(--muted);
+}

@@ -8,7 +8,7 @@ interface Props {
 }
 const {
   title = 'Eonity — Structure and meaning for people and AI.',
-  description = 'Eonity builds open-source tools that give AI a clear scope to work in: TYDAL for digital assets, TYKERF for web pages and, soon, TYSET for documents. People stay in the loop.',
+  description = 'Eonity builds open-source tools where people and AI work together on structured content: TYDAL for digital assets, TYKERF for web pages and, soon, TYSET for publications.',
 } = Astro.props;
 const path = Astro.url.pathname;
 const current = (prefix: string) =>
@@ -70,6 +70,9 @@ const ogImageAlt =
           <a href="/tykerf/" aria-current={current('/tykerf/')}>
             TYKERF
           </a>
+          <a href="/tyset/" aria-current={current('/tyset/')}>
+            TYSET
+          </a>
           <a href="/guides/" aria-current={current('/guides/')}>
             Guides
           </a>
@@ -105,11 +108,12 @@ const ogImageAlt =
               alt="Eonity"
             />
           </a>
-          <p>Structure and meaning for people and AI.</p>
+          <p>People and AI, working together.</p>
         </div>
         <div class="footer-links">
           <a href="/tydal/">TYDAL</a>
           <a href="/tykerf/">TYKERF</a>
+          <a href="/tyset/">TYSET</a>
           <a href="/guides/">User guides</a>
           <a href="/developers/">Developer docs</a>
           <a href="/about/">About Eonity</a>
