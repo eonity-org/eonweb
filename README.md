@@ -1,6 +1,6 @@
 # eonweb
 
-The website of **Eonity** and its open-source tools, published at **https://eonity.org**. 
+The website of **Eonity** and its open-source tools, published at **https://eonity.org**.
 
 > People and AI, working together.
 

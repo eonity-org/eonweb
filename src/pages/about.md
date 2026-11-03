@@ -20,10 +20,10 @@ Structure gives content a meaning that people and AI can both read. When a perso
 
 You choose what to change; the AI works inside that scope, with the moves the tool allows there:
 
-| Tool       | People and AI together                    | The AI's scope          |
-| ---------- | ----------------------------------------- | ----------------------- |
-| **TYDAL**  | Describe and share digital assets         | A Vault                 |
-| **TYKERF** | Build and improve web pages               | A block of a page       |
+| Tool       | People and AI together                     | The AI's scope          |
+| ---------- | ------------------------------------------ | ----------------------- |
+| **TYDAL**  | Describe and share digital assets          | A Vault                 |
+| **TYKERF** | Build and improve web pages                | A block of a page       |
 | **TYSET**  | Review, correct and translate publications | A section of a document |
 
 The tools offer these moves through MCP, so Claude and other AI clients get the same scoped tools the products use themselves.
