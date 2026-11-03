@@ -10,6 +10,7 @@ export const GET: APIRoute = async ({ site }) => {
     '/tydal/',
     '/tydal/about/',
     '/tykerf/',
+    '/tyset/',
     '/guides/',
     ...developers.map((page) =>
       page.id === 'index' ? '/developers/' : `/developers/${page.id}/`,

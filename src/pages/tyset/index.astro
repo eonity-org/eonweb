@@ -1,0 +1,187 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+const uses = [
+  {
+    number: '01',
+    label: 'Review',
+    title: 'Read with a second pair of eyes.',
+    text: 'The AI goes through one section at a time and flags what to look at: inconsistencies, unclear passages, wording that departs from the rest of the document. You decide what stays.',
+  },
+  {
+    number: '02',
+    label: 'Correct',
+    title: 'Fix it where it lives.',
+    text: 'Corrections are made on the structured text, not on a flattened copy, so formats and flow are kept. Every change is shown before it is applied and can be undone.',
+  },
+  {
+    number: '03',
+    label: 'Translate',
+    title: 'Translate the content, keep the layout.',
+    text: 'The text of a section is translated while its structure stays in place, so the translation comes back in the same document, ready for the translator or reviewer to check.',
+  },
+];
+---
+
+<SiteLayout
+  title="TYSET — Structured desktop publishing."
+  description="TYSET is a structured desktop publishing editor, compatible with Adobe FrameMaker MIF files, for publishers who review, correct and translate documents together with an AI. Coming in a few weeks."
+>
+  <section class="hero container" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <img
+        class="product-logo"
+        src="/brand/tyset-logo.svg"
+        width="224"
+        height="69"
+        alt="TYSET"
+      />
+      <p class="eyebrow">
+        <span class="status-dot status-dot-focus"></span>
+        <span>
+          <span class="eyebrow-category">Publishing · </span>Open source ·
+          coming in a few weeks
+        </span>
+      </p>
+      <h1 id="hero-title">
+        Publishing with structure.
+        <br />
+        <span>Reviewed together.</span>
+      </h1>
+      <p class="hero-description">
+        TYSET is a desktop publishing editor in which text flows through the
+        frames of master pages and every format comes from a catalog. It opens
+        Adobe FrameMaker MIF files, so existing publications can come along.
+      </p>
+      <p class="hero-audience">
+        Built for publishers who review, correct and translate their documents
+        with an AI that works on one section at a time.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#uses">
+          What it is for <span aria-hidden="true">→</span>
+        </a>
+        <a
+          class="text-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Opens in a new tab"
+          href="https://x.com/eonity_org"
+        >
+          Follow the launch on X <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+    <figure class="knowledge-model scope-model">
+      <div class="model-header">
+        <span class="eyebrow">A publication in TYSET</span>
+        <span class="model-tag">MIF → STRUCTURE → SECTIONS</span>
+      </div>
+      <ul class="scope-list">
+        <li class="scope-row">
+          <span class="scope-product">
+            <strong>FrameMaker MIF</strong>
+            <small>Your existing documents</small>
+          </span>
+          <span class="scope-frame">
+            <span class="scope-label">Opens in</span>
+            TYSET
+          </span>
+          <span class="scope-moves">Frames, master pages and formats</span>
+        </li>
+        <li class="scope-row">
+          <span class="scope-product">
+            <strong>A section</strong>
+            <small>The AI’s scope</small>
+          </span>
+          <span class="scope-frame">
+            <span class="scope-label">People + AI</span>
+            Review, correct, translate
+          </span>
+          <span class="scope-moves">
+            The rest of the document stays as it is
+          </span>
+        </li>
+      </ul>
+      <div class="scope-person">
+        <span class="scope-person-icon" aria-hidden="true"></span>
+        <span>
+          You review, approve and undo
+          <small>Every change is validated and recorded</small>
+        </span>
+      </div>
+      <figcaption>
+        Structure first, then the work, together.
+        <span>Concept illustration</span>
+      </figcaption>
+    </figure>
+  </section>
+  <section class="section container" id="uses" aria-labelledby="uses-title">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">For publishers</p>
+        <h2 id="uses-title">
+          Review, correct
+          <br />
+          and translate.
+        </h2>
+      </div>
+      <p>
+        The work around a publication is mostly reading, fixing and translating.
+        That is where an AI helps most, and where a person must have the final
+        word.
+      </p>
+    </div>
+    <div class="application-list start-list">
+      {uses.map((item) => (
+        <article class="application">
+          <div class="application-label">
+            <span class="number">{item.number}</span>
+            <span class="eyebrow">{item.label}</span>
+          </div>
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section
+    class="section container open-source-section"
+    aria-labelledby="soon-title"
+  >
+    <div>
+      <p class="eyebrow">Coming soon</p>
+      <h2 id="soon-title">
+        Arriving in
+        <br />a few weeks.
+      </h2>
+    </div>
+    <div>
+      <p>
+        TYSET will be open source under the Apache License 2.0, like the other
+        Eonity tools, and will work with the AI you choose through MCP.
+      </p>
+      <p>
+        Follow{' '}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Opens in a new tab"
+          href="https://x.com/eonity_org"
+        >
+          Eonity on X
+        </a>{' '}
+        or write to <a href="mailto:develop@eonity.org">develop@eonity.org</a>{' '}
+        to hear when it is available.
+      </p>
+      <p>
+        <a class="text-link" href="/">
+          Back to all the tools <span aria-hidden="true">→</span>
+        </a>
+      </p>
+      <p class="trademark-note">
+        Adobe and FrameMaker are trademarks of Adobe Inc. TYSET is an
+        independent project and is not affiliated with or endorsed by Adobe.
+      </p>
+    </div>
+  </section>
+</SiteLayout>

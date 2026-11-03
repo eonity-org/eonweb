@@ -11,6 +11,8 @@ export interface Product {
   scope: string;
   /** What it can do there. */
   moves: string;
+  /** What people and the AI do together with it, in one line. */
+  together: string;
   href?: string;
   github?: string;
   logo?: { src: string; width: number; height: number };
@@ -24,9 +26,10 @@ export const products: Product[] = [
     category: 'Digital assets',
     tagline: 'The typed Digital Asset Layer.',
     description:
-      'Structure documents, images, datasets and code with schemas, enrich them with AI and share selected content through Vaults with people, applications and AI agents.',
+      'Structure documents, images, datasets and code with schemas. The AI proposes the descriptions; you approve them. Share selected content through Vaults with people, applications and AI agents.',
     scope: 'A Vault',
     moves: 'Read, search and propose metadata',
+    together: 'Describe and share digital assets',
     href: '/tydal/',
     github: 'https://github.com/eonity-org/tydal',
     logo: { src: '/brand/tydal-logo.svg', width: 294, height: 118 },
@@ -38,9 +41,10 @@ export const products: Product[] = [
     category: 'Web pages',
     tagline: 'Web pages, one block at a time.',
     description:
-      'Cut a page into named blocks and change it through validated, undoable moves. Kaity, its AI, builds a page from a sentence and then works on the one block you select.',
+      'Cut a page into named blocks. Point at anything, leave tasks, and hand them to Kaity, its AI, who changes only the block she is given. Every move can be undone.',
     scope: 'A block of a page',
     moves: 'Split, move, resize and rewrite',
+    together: 'Build and improve web pages',
     href: '/tykerf/',
     github: 'https://github.com/eonity-org/tykerf',
     logo: { src: '/brand/tykerf-logo.svg', width: 294, height: 87 },
@@ -52,9 +56,11 @@ export const products: Product[] = [
     category: 'Documents',
     tagline: 'Structured desktop publishing.',
     description:
-      'A document editor for structured publishing: text flows through the frames of master pages, and every format comes from a catalog. The AI writes and edits one section at a time through validated operations.',
+      'A structured document editor that opens Adobe FrameMaker MIF files. Publishers review, correct and translate their documents with an AI that works on one section at a time.',
     scope: 'A section of a document',
-    moves: 'Write, format and restructure',
+    moves: 'Review, correct and translate',
+    together: 'Review, correct and translate publications',
+    href: '/tyset/',
     logo: { src: '/brand/tyset-logo.svg', width: 224, height: 69 },
   },
 ];

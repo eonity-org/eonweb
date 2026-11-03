@@ -1,40 +1,42 @@
 ---
 layout: ../layouts/ContentLayout.astro
-title: Structure and meaning for people and AI.
-description: Eonity builds open-source tools that give AI a clear scope to work in, so people and AI can work on the same content together, with people in the loop.
+title: People and AI, working together.
+description: Eonity builds open-source tools in which people and AI work together on structured content, with a clear scope for the AI and people in the loop.
 label: About Eonity
-updated: 2026-10-23
+updated: 2026-11-03
 ---
 
-AI can do real work on content: describe a collection, build a page, lay out a document. It does that work best when it knows what it is working on and where its work ends. Eonity's tools make both explicit.
+Eonity builds open-source tools in which people and AI work together on the same content. The AI does real work: it describes a collection, builds a page, reviews a publication. It does that work best when it knows what it is working on and where its work ends, and when a person has the final say.
 
-## Structure and meaning
+All three tools share one foundation: structure, a controlled scope for the AI, and a person in the loop.
+
+## 1. Structure
 
 Every Eonity tool starts from structure. In **TYDAL**, schemas define what a resource is, how it is described and how it is found. In **TYKERF**, a web page is a tree of named blocks. In **TYSET**, a document's text flows through the frames of master pages, and every format comes from a catalog.
 
 Structure gives content a meaning that people and AI can both read. When a person and an AI point at the same named thing, they can talk about it, change it and check the result.
 
-## A scope for the AI
+## 2. A controlled scope
 
-Each tool gives the AI a defined area to work in and the moves it may make there:
+You choose what to change; the AI works only inside that scope, with the moves the tool allows there:
 
-| Tool       | Content        | The AI's scope          | Its moves                         |
-| ---------- | -------------- | ----------------------- | --------------------------------- |
-| **TYDAL**  | Digital assets | A Vault                 | Read, search and propose metadata |
-| **TYKERF** | Web pages      | A block of a page       | Split, move, resize and rewrite   |
-| **TYSET**  | Documents      | A section of a document | Write, format and restructure     |
+| Tool       | People and AI together                     | The AI's scope          |
+| ---------- | ------------------------------------------ | ----------------------- |
+| **TYDAL**  | Describe and share digital assets          | A Vault                 |
+| **TYKERF** | Build and improve web pages                | A block of a page       |
+| **TYSET**  | Review, correct and translate publications | A section of a document |
 
 The tools offer these moves through MCP, so Claude and other AI clients get the same scoped tools the products use themselves.
 
-## People in the loop
+## 3. A person in the loop
 
-The AI proposes; people decide. TYDAL's AI suggestions can be reviewed before they are applied. Every TYKERF move is validated before it changes the page, and every change can be undone step by step. The same principle will guide TYSET.
+The AI proposes; people decide. TYDAL's AI suggestions can be reviewed before they are applied. Every TYKERF move is validated before it changes the page, and every change can be undone step by step. The same principle guides TYSET.
 
 ## The tools
 
-- **[TYDAL](/tydal/)**, the typed Digital Asset Layer, organizes, enriches and shares digital resources through Vaults. Read [About TYDAL](/tydal/about/) for its model. [FullFrame](/developers/fullframe/), a photography exhibition client, is built on it.
-- **[TYKERF](/tykerf/)** makes complex web pages understandable and editable, and lets AI change one clearly scoped block at a time.
-- **TYSET** brings the same approach to desktop publishing. It is a document editor in which text flows through the frames of master pages and the AI writes and edits one section at a time. It arrives in the coming weeks.
+- **[TYDAL](/tydal/)**, the typed Digital Asset Layer, organizes, enriches and shares digital resources through Vaults. Read [About TYDAL](/tydal/about/) for its model. [FullFrame](/developers/fullframe/), a photography exhibition application, is an external client that shows how to add features to it.
+- **[TYKERF](/tykerf/)** makes complex web pages understandable and editable. You point at anything and leave tasks; its AI, Kaity, changes one clearly scoped block at a time.
+- **[TYSET](/tyset/)** brings the same approach to structured desktop publishing. It is compatible with Adobe FrameMaker MIF files and is meant for publishers who review, correct and translate documents with an AI that works on one section at a time. It arrives in a few weeks.
 
 The **TY** in their names comes from Eoni**ty** and marks them as one family.
 

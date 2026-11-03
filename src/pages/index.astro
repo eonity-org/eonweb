@@ -1,24 +1,25 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import { products } from '../data/products';
-const principles = [
+// The foundation the three tools share.
+const steps = [
   {
     number: '01',
-    title: 'Structure first.',
-    text: 'Schemas describe resources, a slicing tree describes a page, and a document has its own structure. Structure gives content meaning that people and AI can both read.',
-    detail: 'Schemas · slicing trees · documents',
+    label: 'Structure',
+    title: 'Content with a shape.',
+    text: 'Schemas, named blocks, sections of a document. Structure gives every part a name that people and AI can both point at.',
   },
   {
     number: '02',
-    title: 'A scope for the AI.',
-    text: 'Each tool gives the AI a defined area to work in and a set of named moves it may use there: a Vault, one block of a page, one part of a document.',
-    detail: 'Scoped tools through MCP',
+    label: 'Controlled scope',
+    title: 'The AI gets only its area.',
+    text: 'You choose what the AI may work on, and the tool allows it only the moves that make sense there: a Vault, a block, a section. Nothing outside it is touched.',
   },
   {
     number: '03',
-    title: 'People in the loop.',
-    text: 'The AI proposes and shows its work; you review, approve and undo. Every change is checked before it is applied, so nothing leaves its scope unnoticed.',
-    detail: 'Review · approval · undo',
+    label: 'Human in the loop',
+    title: 'You decide.',
+    text: 'Every change is checked before it is applied, and you can review, approve or undo it. The AI does the work; the final say is yours.',
   },
 ];
 ---
@@ -29,23 +30,23 @@ const principles = [
       <p class="eyebrow">
         <span class="status-dot"></span>
         <span>
-          <span class="eyebrow-category">Structure and meaning · </span>Open
-          source · human in the loop
+          <span class="eyebrow-category">People and AI · </span>Open source ·
+          human in the loop
         </span>
       </p>
       <h1 id="hero-title">
-        AI in a scope.
+        People and AI,
         <br />
-        <span>You in the loop.</span>
+        <span>working together.</span>
       </h1>
       <p class="hero-description">
-        Eonity builds open-source tools that give content structure and meaning,
-        so people and AI can work on it together. Each tool hands the AI a clear
-        scope and a set of moves it can make inside it.
+        Eonity builds open-source tools on one foundation: the AI works inside a
+        scope you control, and you stay in the loop. You point at what matters,
+        the AI does the work, you have the final say.
       </p>
       <p class="hero-audience">
-        TYDAL for digital assets. TYKERF for web pages. TYSET for documents,
-        coming soon.
+        TYDAL for digital assets. TYKERF for web pages. TYSET for publications,
+        coming in a few weeks.
       </p>
       <div class="hero-actions">
         <a class="button button-primary" href="#products">
@@ -64,8 +65,8 @@ const principles = [
     </div>
     <figure class="knowledge-model scope-model">
       <div class="model-header">
-        <span class="eyebrow">Where the AI works</span>
-        <span class="model-tag">TOOL → SCOPE → MOVES</span>
+        <span class="eyebrow">Three tools, one way of working</span>
+        <span class="model-tag">SCOPE → AI → YOU REVIEW</span>
       </div>
       <ul class="scope-list">
         {products.map((product) => (
@@ -80,10 +81,12 @@ const principles = [
               <small>{product.category}</small>
             </span>
             <span class="scope-frame">
-              <span class="scope-label">Scope</span>
-              {product.scope}
+              <span class="scope-label">People + AI</span>
+              {product.together}
             </span>
-            <span class="scope-moves">{product.moves}</span>
+            <span class="scope-moves">
+              AI scope: {product.scope.toLowerCase()}
+            </span>
           </li>
         ))}
       </ul>
@@ -99,16 +102,6 @@ const principles = [
       </figcaption>
     </figure>
   </section>
-  <div class="principles-band">
-    <div class="container">
-      <span>
-        <i aria-hidden="true"></i> Open source
-      </span>
-      <span>Structure & meaning</span>
-      <span>Scoped AI · MCP</span>
-      <span>Human in the loop</span>
-    </div>
-  </div>
   <section
     class="applications-section"
     id="products"
@@ -121,13 +114,12 @@ const principles = [
           <h2 id="products-title">
             Different content.
             <br />
-            The same way of working.
+            The same partnership.
           </h2>
         </div>
         <p>
           Each tool understands one kind of content and gives the AI only the
-          moves that make sense for it. They share a design language, an
-          open-source license and the TY in their names.
+          moves that make sense for it.
         </p>
       </div>
       <div class="application-list product-list">
@@ -161,12 +153,14 @@ const principles = [
               AI scope: {product.scope.toLowerCase()}
             </span>
             <div class="application-links">
-              {product.href ? (
+              {product.href && (
                 <a class="text-link" href={product.href}>
-                  Discover {product.name} <span aria-hidden="true">→</span>
+                  {product.status === 'coming' ? 'Preview' : 'Discover'}{' '}
+                  {product.name} <span aria-hidden="true">→</span>
                 </a>
-              ) : (
-                <span class="product-soon">Arriving in the coming weeks</span>
+              )}
+              {product.status === 'coming' && (
+                <span class="product-soon">Arriving in a few weeks</span>
               )}
               {product.github && (
                 <a
@@ -192,26 +186,27 @@ const principles = [
   >
     <div class="section-heading">
       <div>
-        <p class="eyebrow">How we build</p>
+        <p class="eyebrow">One foundation</p>
         <h2 id="approach-title">
-          Structure and meaning,
-          <br />
-          for people and AI.
+          Every tool is built on
+          <br />a controlled scope and you.
         </h2>
       </div>
       <p>
         AI is most useful when it knows what it is working on and where its work
-        ends. Eonity tools make both explicit, so you can hand over real work
-        and still keep the final say.
+        ends, and when a person stays in the loop. TYDAL, TYKERF and TYSET share
+        this foundation.
       </p>
     </div>
-    <div class="benefits">
-      {principles.map((item) => (
-        <article>
-          <span class="number">{item.number}</span>
+    <div class="application-list start-list">
+      {steps.map((item) => (
+        <article class="application">
+          <div class="application-label">
+            <span class="number">{item.number}</span>
+            <span class="eyebrow">{item.label}</span>
+          </div>
           <h3>{item.title}</h3>
           <p>{item.text}</p>
-          <span class="benefit-detail">{item.detail}</span>
         </article>
       ))}
     </div>
@@ -225,17 +220,44 @@ const principles = [
       <div>
         <p class="eyebrow">See it work</p>
         <h2 id="demo-title">
-          The AI proposes.
+          You point.
           <br />
-          You decide.
+          The AI does the work.
         </h2>
       </div>
       <p>
-        Claude curating an exhibition through a TYDAL Vault, and Kaity building
-        a TYKERF page block by block: the same scoped way of working.
+        Kaity working through a list of tasks on a TYKERF page, and Claude
+        describing an exhibition through a TYDAL Vault: you stay in charge, the
+        AI does the legwork.
       </p>
     </div>
     <div class="demo-grid">
+      <figure class="demo-figure">
+        <div class="demo-media demo-media-video">
+          <video
+            src="/tykerf-guides/videos/tykerf-tasks.mp4"
+            poster="/tykerf-guides/videos/tykerf-tasks.jpg"
+            width="1280"
+            height="720"
+            controls
+            playsinline
+            preload="none"
+            aria-label="Two tasks written on a page about London, then given to Kaity, who changes the skyline's colours and adds a section about The Shard."
+          ></video>
+        </div>
+        <figcaption>
+          <strong>TYKERF.</strong> Click what you would change, write a line,
+          and give Kaity all your tasks at once. She answers each one when it is
+          done (1:40).
+          <a class="inline-link" href="/tykerf/#tasks">
+            See the tasks
+          </a>
+          ·
+          <a class="inline-link" href="/tykerf/">
+            More about TYKERF
+          </a>
+        </figcaption>
+      </figure>
       <figure class="demo-figure">
         <a
           class="demo-media"
@@ -264,32 +286,6 @@ const principles = [
           </a>
         </figcaption>
       </figure>
-      <figure class="demo-figure">
-        <div class="demo-media demo-media-video">
-          <video
-            src="/tykerf-guides/videos/tykerf-builds-lisbon.mp4"
-            poster="/tykerf-guides/videos/tykerf-builds-lisbon.jpg"
-            width="1280"
-            height="720"
-            controls
-            playsinline
-            preload="none"
-            aria-label="Kaity, TYKERF's assistant, builds a page about Lisbon from one sentence, block by block, with facts, trivia, games and illustrations."
-          ></video>
-        </div>
-        <figcaption>
-          <strong>TYKERF.</strong> One sentence on the start screen, and Kaity
-          builds a page about Lisbon, one named block at a time (2:48). Then you
-          point at anything, leave her tasks, and give them all to her at once.
-          <a class="inline-link" href="/tykerf/#tasks">
-            See the tasks
-          </a>
-          ·
-          <a class="inline-link" href="/tykerf/">
-            More about TYKERF
-          </a>
-        </figcaption>
-      </figure>
     </div>
   </section>
   <section
@@ -300,9 +296,9 @@ const principles = [
     <div>
       <p class="eyebrow">Built in the open</p>
       <h2 id="open-title">
-        Good knowledge
+        Open tools
         <br />
-        deserves open tools.
+        for working together.
       </h2>
     </div>
     <div>
