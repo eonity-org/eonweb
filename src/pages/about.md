@@ -8,7 +8,7 @@ updated: 2026-11-03
 
 Eonity builds open-source tools in which people and AI work together on the same content. The AI does real work: it describes a collection, builds a page, reviews a publication. It does that work best when it knows what it is working on and where its work ends, and when a person has the final say.
 
-All three tools follow the same three steps.
+All three tools share one foundation: structure, a controlled scope for the AI, and a person in the loop.
 
 ## 1. Structure
 
@@ -16,9 +16,9 @@ Every Eonity tool starts from structure. In **TYDAL**, schemas define what a res
 
 Structure gives content a meaning that people and AI can both read. When a person and an AI point at the same named thing, they can talk about it, change it and check the result.
 
-## 2. Working together
+## 2. A controlled scope
 
-You choose what to change; the AI works inside that scope, with the moves the tool allows there:
+You choose what to change; the AI works only inside that scope, with the moves the tool allows there:
 
 | Tool       | People and AI together                     | The AI's scope          |
 | ---------- | ------------------------------------------ | ----------------------- |
@@ -28,7 +28,7 @@ You choose what to change; the AI works inside that scope, with the moves the to
 
 The tools offer these moves through MCP, so Claude and other AI clients get the same scoped tools the products use themselves.
 
-## 3. People decide
+## 3. A person in the loop
 
 The AI proposes; people decide. TYDAL's AI suggestions can be reviewed before they are applied. Every TYKERF move is validated before it changes the page, and every change can be undone step by step. The same principle guides TYSET.
 

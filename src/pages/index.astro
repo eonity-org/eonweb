@@ -1,25 +1,25 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import { products } from '../data/products';
-// The one way of working the three tools share.
+// The foundation the three tools share.
 const steps = [
   {
     number: '01',
     label: 'Structure',
     title: 'Content with a shape.',
-    text: 'Schemas, a tree of named blocks, a document of frames and formats. Structure gives every part a name that people and AI can both point at.',
+    text: 'Schemas, named blocks, sections of a document. Structure gives every part a name that people and AI can both point at.',
   },
   {
     number: '02',
-    label: 'Together',
-    title: 'You point. The AI works.',
-    text: 'You choose what to change and say what you want. The AI works only inside that scope, with the moves the tool allows, and says what it did.',
+    label: 'Controlled scope',
+    title: 'The AI gets only its area.',
+    text: 'You choose what the AI may work on, and the tool allows it only the moves that make sense there: a Vault, a block, a section. Nothing outside it is touched.',
   },
   {
     number: '03',
-    label: 'Review',
+    label: 'Human in the loop',
     title: 'You decide.',
-    text: 'Every change is checked before it is applied and can be reviewed, approved or undone. Nothing leaves its scope unnoticed.',
+    text: 'Every change is checked before it is applied, and you can review, approve or undo it. The AI does the work; the final say is yours.',
   },
 ];
 ---
@@ -40,9 +40,9 @@ const steps = [
         <span>working together.</span>
       </h1>
       <p class="hero-description">
-        Eonity builds open-source tools on one idea: give content a clear
-        structure, and a person and an AI can work on it together. You point at
-        what matters, the AI does the work, you have the final say.
+        Eonity builds open-source tools on one foundation: the AI works inside a
+        scope you control, and you stay in the loop. You point at what matters,
+        the AI does the work, you have the final say.
       </p>
       <p class="hero-audience">
         TYDAL for digital assets. TYKERF for web pages. TYSET for publications,
@@ -66,7 +66,7 @@ const steps = [
     <figure class="knowledge-model scope-model">
       <div class="model-header">
         <span class="eyebrow">Three tools, one way of working</span>
-        <span class="model-tag">STRUCTURE → TOGETHER → REVIEW</span>
+        <span class="model-tag">SCOPE → AI → YOU REVIEW</span>
       </div>
       <ul class="scope-list">
         {products.map((product) => (
@@ -186,16 +186,17 @@ const steps = [
   >
     <div class="section-heading">
       <div>
-        <p class="eyebrow">How it works</p>
+        <p class="eyebrow">One foundation</p>
         <h2 id="approach-title">
-          Structure first.
+          Every tool is built on
           <br />
-          Then the work, together.
+          a controlled scope and you.
         </h2>
       </div>
       <p>
         AI is most useful when it knows what it is working on and where its work
-        ends. The same three steps run through every Eonity tool.
+        ends, and when a person stays in the loop. TYDAL, TYKERF and TYSET share
+        this foundation.
       </p>
     </div>
     <div class="application-list start-list">
