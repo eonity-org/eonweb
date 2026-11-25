@@ -5,9 +5,12 @@ import ExternalArrow from '../components/ExternalArrow.astro';
 interface Props {
   title?: string;
   description?: string;
+  /** Keep search engines from listing the page (the legal notice). */
+  noindex?: boolean;
 }
 const {
   title = 'Eonity — Structure and meaning for people and AI.',
+  noindex = false,
   description = 'Eonity builds open-source tools where people and AI work together on structured content: TYDAL for digital assets, TYKERF for web pages and, soon, TYSET for publications.',
 } = Astro.props;
 const path = Astro.url.pathname;
@@ -27,6 +30,7 @@ const ogImageAlt =
     <meta name="description" content={description} />
     <meta name="theme-color" content="#ffffff" />
     <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, nofollow, noarchive" />}
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link

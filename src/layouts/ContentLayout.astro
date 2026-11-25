@@ -10,6 +10,8 @@ interface Props {
     /** The product a page belongs to; its name ends the title and the back link returns to it. */
     product?: string;
     productHref?: string;
+    /** Keep search engines from listing the page. */
+    noindex?: boolean;
   };
 }
 const { frontmatter } = Astro.props;
@@ -19,6 +21,7 @@ const owner = frontmatter.product ?? 'Eonity';
 <SiteLayout
   title={`${frontmatter.title} — ${owner}`}
   description={frontmatter.description}
+  noindex={frontmatter.noindex}
 >
   <article class="container content-page">
     <a class="text-link back-link" href={frontmatter.productHref ?? '/'}>

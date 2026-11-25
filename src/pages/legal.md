@@ -4,11 +4,12 @@ title: Legal notice
 description: Who is responsible for eonity.org and the Eonity projects, and how to reach them.
 label: Legal notice
 updated: 2026-11-25
+noindex: true
 ---
 
 ## Who runs eonity.org
 
-eonity.org and the Eonity projects (TYDAL, TYKERF and TYSET) are developed and run by **Juan Antonio Prieto Rodríguez**, as an individual, under the name **John Pree**. Eonity is the name of the projects, not a registered company.
+eonity.org and the Eonity projects (TYDAL, TYKERF and TYSET) are developed and run by **Juan Antonio Prieto Rodríguez**, as an individual. Eonity is the name of the projects, not a registered company.
 
 **Contact:** [develop@eonity.org](mailto:develop@eonity.org)
 
@@ -22,7 +23,7 @@ This website sets no cookies, has no analytics and no forms, and collects no per
 
 ## Aviso legal
 
-**Responsable:** Juan Antonio Prieto Rodríguez, que desarrolla y opera eonity.org y los proyectos de Eonity (TYDAL, TYKERF y TYSET) como persona física, con el nombre John Pree. Eonity es el nombre de los proyectos, no una sociedad registrada.
+**Responsable:** Juan Antonio Prieto Rodríguez, que desarrolla y opera eonity.org y los proyectos de Eonity (TYDAL, TYKERF y TYSET) como persona física. Eonity es el nombre de los proyectos, no una sociedad registrada.
 
 **Contacto:** [develop@eonity.org](mailto:develop@eonity.org)
 
