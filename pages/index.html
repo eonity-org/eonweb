@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pages</title>
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<style data-tykerf-fonts>
+@font-face { font-family: "Manrope"; src: url("../assets/fonts/manrope-latin-wght-normal.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+</style>
+<!-- TYKERF theme: every template and component uses these variables. Change them in the Page tab. -->
+<style data-tykerf-theme data-tykerf-preset="studio">
+:root {
+  --color-bg: #f8fbfc;
+  /* bands, cards and lines follow the background unless you give them a colour of their own */
+  --color-band: #f3f6f8;
+  --color-surface: color-mix(in srgb, var(--color-bg) 96%, var(--color-text));
+  --color-text: #083f58;
+  --color-muted: #1a5d7d;
+  --color-border: color-mix(in srgb, var(--color-bg) 86%, var(--color-text));
+  --color-accent: #0a5475;
+  --color-on-accent: #ffffff;
+  /* a pastel of the accent, for soft bands and cards */
+  --color-soft: #eef5f7;
+  /* a second accent for details (rules, dots, bars) and figures on dark cards; light enough for the dark band */
+  --color-highlight: color-mix(in srgb, var(--color-accent) 50%, var(--color-on-dark));
+  /* the one dark band a page may have (#tone-dark): a footer, a hero */
+  --color-dark: #084059;
+  --color-on-dark: #f1f7f9;
+  --font-body: "Manrope", system-ui, sans-serif;
+  --font-heading: "Manrope", system-ui, sans-serif;
+  /* a second voice for subtitles and quotes */
+  --font-accent: "Manrope", system-ui, sans-serif;
+  --weight-heading: 500;
+  --tracking-heading: -0.03em;
+  --text-hero: clamp(44px, 7.2vw, 96px);
+  --text-title: clamp(32px, 4.2vw, 52px);
+  --text-lead: clamp(18px, 1.5vw, 21px);
+  --text-body: 17px;
+  --radius: 8px;
+  --radius-button: 4px;
+  --gap: 24px;
+  --space-section: clamp(72px, 10vw, 136px);
+  --max-width: 1240px;
+}
+body { background: var(--color-bg); color: var(--color-text); font: var(--text-body)/1.6 var(--font-body); -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: var(--weight-heading); letter-spacing: var(--tracking-heading); line-height: 1.08; margin: 0 0 .5em; text-wrap: balance; }
+p { text-wrap: pretty; }
+a { color: var(--color-accent); }
+/* boxes look like the page, not like TYKERF's default coloured outline; components set their own padding */
+:where(.sw-leaf) { background: none; outline: none; }
+.sw-leaf { padding: 0; }
+/* #dense: one section packed tighter (less space around it, smaller titles), whatever the theme */
+.t-dense { --space-section: clamp(32px, 4vw, 56px); --text-title: clamp(24px, 2.6vw, 32px); --text-hero: clamp(32px, 4vw, 52px); --gap: 16px; }
+/* band tones: tag a block #tone-alt, #tone-soft or #tone-dark; the block (a box with any code, or a whole
+   container) takes the band's background, and components inside paint var(--section-bg) too */
+.t-tone-alt { --section-bg: var(--color-band); background: var(--section-bg); }
+.t-tone-soft { --section-bg: var(--color-soft); --color-muted: color-mix(in srgb, var(--color-text) 78%, var(--color-soft)); background: var(--section-bg); }
+.t-tone-dark {
+  --section-bg: var(--color-dark);
+  background: var(--section-bg);
+  --color-text: var(--color-on-dark);
+  --color-muted: color-mix(in srgb, var(--color-on-dark) 66%, var(--color-dark));
+  --color-border: color-mix(in srgb, var(--color-on-dark) 14%, var(--color-dark));
+  --color-surface: color-mix(in srgb, var(--color-on-dark) 6%, var(--color-dark));
+  --color-soft: color-mix(in srgb, var(--color-accent) 22%, var(--color-dark));
+  color: var(--color-text);
+}
+</style>
+<!-- eonity: every page -->
+<meta name="theme-color" content="#ffffff">
+<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+<meta property="og:site_name" content="Eonity">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The eonity logo above the line “Structure and meaning for people and AI.” above the TYDAL, TYKERF and TYSET logos.">
+<meta name="twitter:site" content="@eonity_org">
+<meta name="twitter:image:alt" content="The eonity logo above the line “Structure and meaning for people and AI.” above the TYDAL, TYKERF and TYSET logos.">
+<!-- /eonity: every page -->
+
+<style>
+  body { margin: 0; background: var(--color-bg, #fff); color: var(--color-text, #111); font-family: var(--font-body, system-ui, sans-serif); line-height: 1.5; }
+  main { max-width: min(var(--max-width, 760px), 760px); margin: 0 auto; padding: 56px 20px; }
+  h1 { font-family: var(--font-heading, inherit); font-size: var(--text-title, 2rem); margin: 0 0 24px; }
+  ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+  li a { display: grid; gap: 2px; padding: 10px 0; border-bottom: 1px solid var(--color-border, #ddd); color: var(--color-accent, #0A5475); text-decoration: none; }
+  .title { font-size: 1.15rem; }
+  .route { font-size: .85rem; color: var(--color-muted, #666); font-family: var(--font-mono, ui-monospace, monospace); }
+  .route b { font-family: var(--font-body, system-ui, sans-serif); font-weight: 600; font-size: .75rem; text-transform: uppercase; letter-spacing: .06em; margin-left: 6px; }
+  li a:hover .title, li a:focus-visible .title { text-decoration: underline; }
+  footer { display: flex; align-items: center; gap: 8px; margin-top: 32px; font-size: .9rem; color: var(--color-muted, #666); }
+  footer svg { width: 16px; height: 16px; color: #0A5475; }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Pages</h1>
+  <ul>
+    <li><a href="../"><span class="title">Eonity — Structure and meaning for people and AI.</span><span class="route">/ <b>home</b></span></a></li>
+    <li><a href="../about/"><span class="title">People and AI, working together. — Eonity</span><span class="route">/about/</span></a></li>
+    <li><a href="../guides/"><span class="title">User guides — Eonity</span><span class="route">/guides/</span></a></li>
+    <li><a href="../legal/"><span class="title">Legal notice — Eonity</span><span class="route">/legal/</span></a></li>
+    <li><a href="../tykerf/"><span class="title">TYKERF — Web pages, one block at a time.</span><span class="route">/tykerf/</span></a></li>
+    <li><a href="../tyset/"><span class="title">TYSET — Structured desktop publishing.</span><span class="route">/tyset/</span></a></li>
+    <li style="padding-left:18px"><a href="../developers/"><span class="title">Developer documentation — TYDAL developers</span><span class="route">/developers/</span></a></li>
+    <li style="padding-left:18px"><a href="../developers/api-and-integrations/"><span class="title">API and integrations — TYDAL developers</span><span class="route">/developers/api-and-integrations/</span></a></li>
+    <li style="padding-left:18px"><a href="../developers/configuration/"><span class="title">Configuration — TYDAL developers</span><span class="route">/developers/configuration/</span></a></li>
+    <li style="padding-left:18px"><a href="../developers/fullframe/"><span class="title">FullFrame: an example client of TYDAL — TYDAL developers</span><span class="route">/developers/fullframe/</span></a></li>
+    <li style="padding-left:18px"><a href="../developers/getting-started/"><span class="title">Getting started — TYDAL developers</span><span class="route">/developers/getting-started/</span></a></li>
+    <li style="padding-left:18px"><a href="../developers/screenshots/"><span class="title">Screenshots and walkthroughs — TYDAL developers</span><span class="route">/developers/screenshots/</span></a></li>
+    <li style="padding-left:18px"><a href="../developers/troubleshooting/"><span class="title">Troubleshooting — TYDAL developers</span><span class="route">/developers/troubleshooting/</span></a></li>
+    <li style="padding-left:18px"><a href="../tydal/"><span class="title">TYDAL — Control your knowledge flow.</span><span class="route">/tydal/</span></a></li>
+    <li style="padding-left:18px"><a href="../tydal/about/"><span class="title">Content with a context. — TYDAL</span><span class="route">/tydal/about/</span></a></li>
+  </ul>
+</main>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Eonity — Structure and meaning for people and AI.</title>
+<style id="sw--style">@layer tykerf, theme, kit, page;
+@layer tykerf {
+
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font:16px/1.5 system-ui,sans-serif;color:#1d1d1f;background:#fff}
+#sw--page>.sw-op,#sw--page>.sw-leaf{min-height:100vh}
+.sw-H{display:flex;flex-direction:column;min-width:0}
+.sw-V{display:flex;flex-direction:row;min-width:0}
+.sw-W,.sw-P{display:grid;min-width:0}
+.sw-slot>*{flex:1 1 auto}
+.sw-leaf{padding:12px;min-width:0;overflow-wrap:break-word}
+:where(.sw-leaf>:first-child){margin-top:0}:where(.sw-leaf>:last-child){margin-bottom:0}
+:where(.sw-leaf p){margin:0 0 .6em}
+:where(.sw-leaf img){max-width:100%;height:auto;display:block}
+:where(.sw-fill img){width:100%}
+/* default look of boxes: zero specificity so a box's own scoped CSS always wins */
+:where(.sw-d0.sw-leaf){background:#eef3ff}:where(.sw-d1.sw-leaf){background:#f2fbf4}:where(.sw-d2.sw-leaf){background:#fff7ec}:where(.sw-d3.sw-leaf){background:#f8f0ff}
+:where(.sw-leaf){outline:1px solid #0001}
+.sw-label{font:600 11px/1.2 ui-monospace,monospace;color:#0008;margin-bottom:4px}
+.sw-img{background:repeating-linear-gradient(45deg,#0001 0 8px,#0002 8px 16px);max-width:100%}
+.t-dark,.t-dark .sw-leaf{background:#1d1d1f;color:#f5f5f7}
+.sw-overlay{position:absolute;background:#fff;border:1px solid #0003;border-radius:8px;padding:8px 12px;box-shadow:0 4px 16px #0002}
+
+}</style>
+<link rel="icon" href="./favicon.ico" type="image/x-icon">
+<meta name="description" content="Eonity builds open-source tools where people and AI work together on structured content: TYDAL for digital assets, TYKERF for web pages and, soon, TYSET for publications.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Eonity — Structure and meaning for people and AI.">
+<meta property="og:description" content="Eonity builds open-source tools where people and AI work together on structured content: TYDAL for digital assets, TYKERF for web pages and, soon, TYSET for publications.">
+<meta property="og:image" content="https://eonity.org/assets/images/eonity-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<style data-tykerf-fonts>
+@font-face { font-family: "Manrope"; src: url("./assets/fonts/manrope-latin-wght-normal.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+</style>
+<!-- TYKERF theme: every template and component uses these variables. Change them in the Page tab. -->
+<style data-tykerf-theme data-tykerf-preset="studio">@layer theme {
+
+:root {
+  --color-bg: #f8fbfc;
+  /* bands, cards and lines follow the background unless you give them a colour of their own */
+  --color-band: #f3f6f8;
+  --color-surface: color-mix(in srgb, var(--color-bg) 96%, var(--color-text));
+  --color-text: #083f58;
+  --color-muted: #1a5d7d;
+  --color-border: color-mix(in srgb, var(--color-bg) 86%, var(--color-text));
+  --color-accent: #0a5475;
+  --color-on-accent: #ffffff;
+  /* a pastel of the accent, for soft bands and cards */
+  --color-soft: #eef5f7;
+  /* a second accent for details (rules, dots, bars) and figures on dark cards; light enough for the dark band */
+  --color-highlight: color-mix(in srgb, var(--color-accent) 50%, var(--color-on-dark));
+  /* the one dark band a page may have (#tone-dark): a footer, a hero */
+  --color-dark: #084059;
+  --color-on-dark: #f1f7f9;
+  --font-body: "Manrope", system-ui, sans-serif;
+  --font-heading: "Manrope", system-ui, sans-serif;
+  /* a second voice for subtitles and quotes */
+  --font-accent: "Manrope", system-ui, sans-serif;
+  --weight-heading: 500;
+  --tracking-heading: -0.03em;
+  --text-hero: clamp(44px, 7.2vw, 96px);
+  --text-title: clamp(32px, 4.2vw, 52px);
+  --text-lead: clamp(18px, 1.5vw, 21px);
+  --text-body: 17px;
+  --radius: 8px;
+  --radius-button: 4px;
+  --gap: 24px;
+  --space-section: clamp(72px, 10vw, 136px);
+  --max-width: 1240px;
+}
+body { background: var(--color-bg); color: var(--color-text); font: var(--text-body)/1.6 var(--font-body); -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: var(--weight-heading); letter-spacing: var(--tracking-heading); line-height: 1.08; margin: 0 0 .5em; text-wrap: balance; }
+p { text-wrap: pretty; }
+a { color: var(--color-accent); }
+/* boxes look like the page, not like TYKERF's default coloured outline; components set their own padding */
+:where(.sw-leaf) { background: none; outline: none; }
+.sw-leaf { padding: 0; }
+/* #dense: one section packed tighter (less space around it, smaller titles), whatever the theme */
+.t-dense { --space-section: clamp(32px, 4vw, 56px); --text-title: clamp(24px, 2.6vw, 32px); --text-hero: clamp(32px, 4vw, 52px); --gap: 16px; }
+/* band tones: tag a block #tone-alt, #tone-soft or #tone-dark; the block (a box with any code, or a whole
+   container) takes the band's background, and components inside paint var(--section-bg) too */
+.t-tone-alt { --section-bg: var(--color-band); background: var(--section-bg); }
+.t-tone-soft { --section-bg: var(--color-soft); --color-muted: color-mix(in srgb, var(--color-text) 78%, var(--color-soft)); background: var(--section-bg); }
+.t-tone-dark {
+  --section-bg: var(--color-dark);
+  background: var(--section-bg);
+  --color-text: var(--color-on-dark);
+  --color-muted: color-mix(in srgb, var(--color-on-dark) 66%, var(--color-dark));
+  --color-border: color-mix(in srgb, var(--color-on-dark) 14%, var(--color-dark));
+  --color-surface: color-mix(in srgb, var(--color-on-dark) 6%, var(--color-dark));
+  --color-soft: color-mix(in srgb, var(--color-accent) 22%, var(--color-dark));
+  color: var(--color-text);
+}
+
+}</style>
+<!-- eonity: every page -->
+<meta name="theme-color" content="#ffffff">
+<link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png">
+<meta property="og:site_name" content="Eonity">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The eonity logo above the line “Structure and meaning for people and AI.” above the TYDAL, TYKERF and TYSET logos.">
+<meta name="twitter:site" content="@eonity_org">
+<meta name="twitter:image:alt" content="The eonity logo above the line “Structure and meaning for people and AI.” above the TYDAL, TYKERF and TYSET logos.">
+<!-- /eonity: every page -->
+<link rel="stylesheet" href="./kit/site.css?v=e34b5831c477" data-tykerf-kit>
+
+<link rel="canonical" href="https://eonity.org/">
+<meta property="og:url" content="https://eonity.org/">
+</head>
+<body>
+<div id="sw--page">
+<div id="sw-page" data-sw="page" class="sw-op sw-H sw-d0" style="">
+<header id="sw-nav" data-sw="nav" class="sw-leaf sw-d1" style=""><header class="site-header"><div class="container header-inner"><a class="brand" href="./" aria-current="page" aria-label="Eonity home"><img src="./assets/images/eonity-logo.svg" width="383" height="118" alt="Eonity"></a><nav aria-label="Main navigation"><a href="./tydal/">TYDAL</a><a href="./tykerf/">TYKERF</a><a href="./tyset/">TYSET</a><a href="./guides/">Guides</a><a href="./developers/">Developers</a><a href="./about/">About</a></nav><a class="header-github" target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://github.com/eonity-org">GitHub <span aria-hidden="true">↗</span></a></div></header>
+<script type="module">var e=document.querySelector(`.site-header`);if(e){let t=()=>{document.documentElement.style.setProperty(`--header-height`,`${e.getBoundingClientRect().height}px`)};t(),new ResizeObserver(t).observe(e)}</script></header>
+<main id="sw-hero" data-sw="hero" class="sw-leaf sw-d1" style=""><section class="hero container" aria-labelledby="hero-title"><div class="hero-copy"><p class="eyebrow"><span class="status-dot"></span><span><span class="eyebrow-category">People and AI · </span>Open source · human in the loop</span></p><h1 id="hero-title">People and AI,<br><span>working together.</span></h1><p class="hero-description">Eonity builds open-source tools on one foundation: the AI works inside a scope you control, and you stay in the loop. You point at what matters, the AI does the work, you have the final say.</p><p class="hero-audience">TYDAL for digital assets. TYKERF for web pages. TYSET for publications, coming in a few weeks.</p><div class="hero-actions"><a class="button button-primary" href="#products">Explore the tools <span aria-hidden="true">→</span></a><a class="text-link" target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://github.com/eonity-org">Eonity on GitHub <span aria-hidden="true">↗</span></a></div></div><figure class="knowledge-model scope-model"><div class="model-header"><span class="eyebrow">Three tools, one way of working</span><span class="model-tag">SCOPE → AI → YOU REVIEW</span></div><ul class="scope-list"><li class="scope-row"><span class="scope-product"><strong>TYDAL</strong><small>Digital assets</small></span><span class="scope-frame"><span class="scope-label">People + AI</span>Describe and share digital assets</span><span class="scope-moves">AI scope: a vault</span></li><li class="scope-row"><span class="scope-product"><strong>TYKERF</strong><small>Web pages</small></span><span class="scope-frame"><span class="scope-label">People + AI</span>Build and improve web pages</span><span class="scope-moves">AI scope: a block of a page</span></li><li class="scope-row scope-row-coming"><span class="scope-product"><strong>TYSET</strong><small>Documents</small></span><span class="scope-frame"><span class="scope-label">People + AI</span>Review, correct and translate publications</span><span class="scope-moves">AI scope: a section of a document</span></li></ul><div class="scope-person"><span class="scope-person-icon" aria-hidden="true"></span><span>You review, approve and undo<small>Every move is validated and recorded</small></span></div><figcaption>Three tools. One way of working. <span>Concept illustration</span></figcaption></figure></section>
+</main>
+<section id="sw-tools" data-sw="tools" class="sw-leaf sw-d1" style=""><section class="applications-section" id="products" aria-labelledby="products-title"><div class="container section"><div class="section-heading"><div><p class="eyebrow">The Eonity tools</p><h2 id="products-title">Different content.<br>The same partnership.</h2></div><p>Each tool understands one kind of content and gives the AI only the moves that make sense for it.</p></div><div class="application-list product-list"><article class="application product-card"><div class="application-label"><span class="number">01</span><span class="eyebrow">Digital assets</span></div><h3><img class="product-card-logo" src="./assets/images/tydal-lockup-52.png" srcset="./assets/images/tydal-lockup-52.png 1x, ./assets/images/tydal-lockup-104.png 2x" width="150" height="52" alt="TYDAL"></h3><p class="product-tagline">The typed Digital Asset Layer.</p><p>Structure documents, images, datasets and code with schemas. The AI proposes the descriptions; you approve them. Share selected content through Vaults with people, applications and AI agents.</p><span class="application-category">AI scope: a vault</span><div class="application-links"><a class="text-link" href="./tydal/">Discover TYDAL <span aria-hidden="true">→</span></a><a class="text-link" target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://github.com/eonity-org/tydal">TYDAL on GitHub <span aria-hidden="true">↗</span></a></div></article><article class="application product-card"><div class="application-label"><span class="number">02</span><span class="eyebrow">Web pages</span></div><h3><img class="product-card-logo" src="./assets/images/tykerf-lockup-52.png" srcset="./assets/images/tykerf-lockup-52.png 1x, ./assets/images/tykerf-lockup-104.png 2x" width="174" height="52" alt="TYKERF"></h3><p class="product-tagline">Web pages, one block at a time.</p><p>Cut a page into named blocks. Point at anything, leave tasks, and hand them to Kaity, its AI, who changes only the block she is given. Every move can be undone.</p><span class="application-category">AI scope: a block of a page</span><div class="application-links"><a class="text-link" href="./tykerf/">Discover TYKERF <span aria-hidden="true">→</span></a><a class="text-link" target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://github.com/eonity-org/tykerf">TYKERF on GitHub <span aria-hidden="true">↗</span></a></div></article><article class="application product-card"><div class="application-label"><span class="number">03</span><span class="eyebrow">Documents</span><span class="product-badge">Coming soon</span></div><h3><img class="product-card-logo" src="./assets/images/tyset-lockup-52.png" srcset="./assets/images/tyset-lockup-52.png 1x, ./assets/images/tyset-lockup-104.png 2x" width="157" height="52" alt="TYSET"></h3><p class="product-tagline">Structured desktop publishing.</p><p>A structured document editor that opens Adobe FrameMaker MIF files. Publishers review, correct and translate their documents with an AI that works on one section at a time.</p><span class="application-category">AI scope: a section of a document</span><div class="application-links"><a class="text-link" href="./tyset/">Preview TYSET <span aria-hidden="true">→</span></a><span class="product-soon">Arriving in a few weeks</span></div></article></div></div></section>
+</section>
+<section id="sw-approach" data-sw="approach" class="sw-leaf sw-d1" style=""><section class="section container" id="approach" aria-labelledby="approach-title"><div class="section-heading"><div><p class="eyebrow">One foundation</p><h2 id="approach-title">Every tool is built on<br>a controlled scope and you.</h2></div><p>AI is most useful when it knows what it is working on and where its work ends, and when a person stays in the loop. TYDAL, TYKERF and TYSET share this foundation.</p></div><div class="application-list start-list"><article class="application"><div class="application-label"><span class="number">01</span><span class="eyebrow">Structure</span></div><h3>Content with a shape.</h3><p>Schemas, named blocks, sections of a document. Structure gives every part a name that people and AI can both point at.</p></article><article class="application"><div class="application-label"><span class="number">02</span><span class="eyebrow">Controlled scope</span></div><h3>The AI gets only its area.</h3><p>You choose what the AI may work on, and the tool allows it only the moves that make sense there: a Vault, a block, a section. Nothing outside it is touched.</p></article><article class="application"><div class="application-label"><span class="number">03</span><span class="eyebrow">Human in the loop</span></div><h3>You decide.</h3><p>Every change is checked before it is applied, and you can review, approve or undo it. The AI does the work; the final say is yours.</p></article></div></section>
+</section>
+<section id="sw-demo" data-sw="demo" class="sw-leaf sw-d1" style=""><section class="section container demo-section" id="see-it-work" aria-labelledby="demo-title"><div class="section-heading"><div><p class="eyebrow">See it work</p><h2 id="demo-title">You point.<br>The AI does the work.</h2></div><p>Kaity working through a list of tasks on a TYKERF page, and Claude describing an exhibition through a TYDAL Vault: you stay in charge, the AI does the legwork.</p></div><div class="demo-grid"><figure class="demo-figure"><div class="demo-media demo-media-video"><video src="./tykerf-guides/videos/tykerf-tasks.mp4" poster="./tykerf-guides/videos/tykerf-tasks.jpg" width="1280" height="720" controls playsinline preload="none" aria-label="Two tasks written on a page about London, then given to Kaity, who changes the skyline's colours and adds a section about The Shard."></video></div><figcaption><strong>TYKERF.</strong> Click what you would change, write a line, and give Kaity all your tasks at once. She answers each one when it is done (1:40).<a class="inline-link" href="./tykerf/#tasks">See the tasks</a>·<a class="inline-link" href="./tykerf/">More about TYKERF</a></figcaption></figure><figure class="demo-figure"><a class="demo-media" target="_blank" rel="noopener noreferrer" title="Opens the video in a new tab" href="./images/claude-curates-drift.mp4"><video src="./images/claude-curates-drift.mp4" width="1226" height="940" autoplay muted loop playsinline preload="metadata" aria-label="Claude Desktop reads the six photographs of the Drift exhibition through TYDAL, proposes a title and description for each, asks permission to update them, and shows the table of new titles."></video></a><figcaption><strong>TYDAL.</strong> Claude reads an exhibition through its Vault, proposes titles and descriptions, and asks before it writes them back.<a class="inline-link" href="./tydal/#see-it-work">More about TYDAL</a></figcaption></figure></div></section>
+<script type="module">var e=document.querySelector(`.demo-figure video[autoplay]`);e&&matchMedia(`(prefers-reduced-motion: reduce)`).matches&&(e.removeAttribute(`autoplay`),e.pause());</script>
+</section>
+<section id="sw-open-source" data-sw="open-source" class="sw-leaf sw-d1" style=""><section class="section container open-source-section" id="open-source" aria-labelledby="open-title"><div><p class="eyebrow">Built in the open</p><h2 id="open-title">Open tools<br>for working together.</h2></div><div><p>Every Eonity tool is open source under the <a target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>. Run them yourself, inspect the code and contribute to their development.</p><p>They work with the AI you choose: connect Claude or another MCP client, and it gets the same scoped moves the tools use themselves.</p><a class="text-link" target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://github.com/eonity-org">Explore the repositories <span aria-hidden="true">↗</span></a><p><a class="text-link" href="./about/">About Eonity <span aria-hidden="true">→</span></a></p></div></section>
+</section>
+<footer id="sw-footer" data-sw="footer" class="sw-leaf sw-d1" style=""><footer class="site-footer"><div class="container footer-top"><div><a class="brand" href="./" aria-current="page" aria-label="Eonity home"><img src="./assets/images/eonity-logo.svg" width="383" height="118" alt="Eonity"></a><p>People and AI, working together.</p></div><div class="footer-links"><a href="./tydal/">TYDAL</a><a href="./tykerf/">TYKERF</a><a href="./tyset/">TYSET</a><a href="./guides/">User guides</a><a href="./developers/">Developer docs</a><a href="./about/">About Eonity</a><a target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://github.com/eonity-org">GitHub <svg class="external-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"></path></svg></a><a target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://x.com/eonity_org">Follow Eonity on X <svg class="external-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"></path></svg></a><a href="mailto:develop@eonity.org">develop@eonity.org</a></div></div><div class="container footer-bottom"><span>© 2026 <a href="./about/">Eonity</a>. Open-source projects under the <a target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>. <a href="./legal/">Legal notice</a></span><a target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://github.com/eonity-org/eonweb">Website source <svg class="external-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"></path></svg></a></div></footer>
+</footer>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Screenshots and walkthroughs — TYDAL developers</title>
+<style id="sw--style">@layer tykerf, theme, kit, page;
+@layer tykerf {
+
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font:16px/1.5 system-ui,sans-serif;color:#1d1d1f;background:#fff}
+#sw--page>.sw-op,#sw--page>.sw-leaf{min-height:100vh}
+.sw-H{display:flex;flex-direction:column;min-width:0}
+.sw-V{display:flex;flex-direction:row;min-width:0}
+.sw-W,.sw-P{display:grid;min-width:0}
+.sw-slot>*{flex:1 1 auto}
+.sw-leaf{padding:12px;min-width:0;overflow-wrap:break-word}
+:where(.sw-leaf>:first-child){margin-top:0}:where(.sw-leaf>:last-child){margin-bottom:0}
+:where(.sw-leaf p){margin:0 0 .6em}
+:where(.sw-leaf img){max-width:100%;height:auto;display:block}
+:where(.sw-fill img){width:100%}
+/* default look of boxes: zero specificity so a box's own scoped CSS always wins */
+:where(.sw-d0.sw-leaf){background:#eef3ff}:where(.sw-d1.sw-leaf){background:#f2fbf4}:where(.sw-d2.sw-leaf){background:#fff7ec}:where(.sw-d3.sw-leaf){background:#f8f0ff}
+:where(.sw-leaf){outline:1px solid #0001}
+.sw-label{font:600 11px/1.2 ui-monospace,monospace;color:#0008;margin-bottom:4px}
+.sw-img{background:repeating-linear-gradient(45deg,#0001 0 8px,#0002 8px 16px);max-width:100%}
+.t-dark,.t-dark .sw-leaf{background:#1d1d1f;color:#f5f5f7}
+.sw-overlay{position:absolute;background:#fff;border:1px solid #0003;border-radius:8px;padding:8px 12px;box-shadow:0 4px 16px #0002}
+
+}</style>
+<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+<meta name="description" content="Visual guides to the interface and common development workflows.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Screenshots and walkthroughs — TYDAL developers">
+<meta property="og:description" content="Visual guides to the interface and common development workflows.">
+<meta property="og:image" content="https://eonity.org/assets/images/eonity-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<style data-tykerf-fonts>
+@font-face { font-family: "Manrope"; src: url("../../assets/fonts/manrope-latin-wght-normal.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+</style>
+<!-- TYKERF theme: every template and component uses these variables. Change them in the Page tab. -->
+<style data-tykerf-theme data-tykerf-preset="studio">@layer theme {
+
+:root {
+  --color-bg: #f8fbfc;
+  /* bands, cards and lines follow the background unless you give them a colour of their own */
+  --color-band: #f3f6f8;
+  --color-surface: color-mix(in srgb, var(--color-bg) 96%, var(--color-text));
+  --color-text: #083f58;
+  --color-muted: #1a5d7d;
+  --color-border: color-mix(in srgb, var(--color-bg) 86%, var(--color-text));
+  --color-accent: #0a5475;
+  --color-on-accent: #ffffff;
+  /* a pastel of the accent, for soft bands and cards */
+  --color-soft: #eef5f7;
+  /* a second accent for details (rules, dots, bars) and figures on dark cards; light enough for the dark band */
+  --color-highlight: color-mix(in srgb, var(--color-accent) 50%, var(--color-on-dark));
+  /* the one dark band a page may have (#tone-dark): a footer, a hero */
+  --color-dark: #084059;
+  --color-on-dark: #f1f7f9;
+  --font-body: "Manrope", system-ui, sans-serif;
+  --font-heading: "Manrope", system-ui, sans-serif;
+  /* a second voice for subtitles and quotes */
+  --font-accent: "Manrope", system-ui, sans-serif;
+  --weight-heading: 500;
+  --tracking-heading: -0.03em;
+  --text-hero: clamp(44px, 7.2vw, 96px);
+  --text-title: clamp(32px, 4.2vw, 52px);
+  --text-lead: clamp(18px, 1.5vw, 21px);
+  --text-body: 17px;
+  --radius: 8px;
+  --radius-button: 4px;
+  --gap: 24px;
+  --space-section: clamp(72px, 10vw, 136px);
+  --max-width: 1240px;
+}
+body { background: var(--color-bg); color: var(--color-text); font: var(--text-body)/1.6 var(--font-body); -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: var(--weight-heading); letter-spacing: var(--tracking-heading); line-height: 1.08; margin: 0 0 .5em; text-wrap: balance; }
+p { text-wrap: pretty; }
+a { color: var(--color-accent); }
+/* boxes look like the page, not like TYKERF's default coloured outline; components set their own padding */
+:where(.sw-leaf) { background: none; outline: none; }
+.sw-leaf { padding: 0; }
+/* #dense: one section packed tighter (less space around it, smaller titles), whatever the theme */
+.t-dense { --space-section: clamp(32px, 4vw, 56px); --text-title: clamp(24px, 2.6vw, 32px); --text-hero: clamp(32px, 4vw, 52px); --gap: 16px; }
+/* band tones: tag a block #tone-alt, #tone-soft or #tone-dark; the block (a box with any code, or a whole
+   container) takes the band's background, and components inside paint var(--section-bg) too */
+.t-tone-alt { --section-bg: var(--color-band); background: var(--section-bg); }
+.t-tone-soft { --section-bg: var(--color-soft); --color-muted: color-mix(in srgb, var(--color-text) 78%, var(--color-soft)); background: var(--section-bg); }
+.t-tone-dark {
+  --section-bg: var(--color-dark);
+  background: var(--section-bg);
+  --color-text: var(--color-on-dark);
+  --color-muted: color-mix(in srgb, var(--color-on-dark) 66%, var(--color-dark));
+  --color-border: color-mix(in srgb, var(--color-on-dark) 14%, var(--color-dark));
+  --color-surface: color-mix(in srgb, var(--color-on-dark) 6%, var(--color-dark));
+  --color-soft: color-mix(in srgb, var(--color-accent) 22%, var(--color-dark));
+  color: var(--color-text);
+}
+
+}</style>
+<!-- eonity: every page -->
+<meta name="theme-color" content="#ffffff">
+<link rel="apple-touch-icon" href="../../assets/images/apple-touch-icon.png">
+<meta property="og:site_name" content="Eonity">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The eonity logo above the line “Structure and meaning for people and AI.” above the TYDAL, TYKERF and TYSET logos.">
+<meta name="twitter:site" content="@eonity_org">
+<meta name="twitter:image:alt" content="The eonity logo above the line “Structure and meaning for people and AI.” above the TYDAL, TYKERF and TYSET logos.">
+<!-- /eonity: every page -->
+<link rel="stylesheet" href="../../kit/site.css?v=e34b5831c477" data-tykerf-kit>
+
+<link rel="canonical" href="https://eonity.org/developers/screenshots/">
+<meta property="og:url" content="https://eonity.org/developers/screenshots/">
+</head>
+<body>
+<div id="sw--page">
+<div id="sw-page" data-sw="page" class="sw-op sw-H sw-d0" style="">
+<header id="sw-nav" data-sw="nav" class="sw-leaf sw-d1" style=""><header class="site-header"><div class="container header-inner"><a class="brand" href="../../" aria-label="Eonity home"><img src="../../assets/images/eonity-logo.svg" width="383" height="118" alt="Eonity"></a><nav aria-label="Main navigation"><a href="../../tydal/">TYDAL</a><a href="../../tykerf/">TYKERF</a><a href="../../tyset/">TYSET</a><a href="../../guides/">Guides</a><a href="../../developers/">Developers</a><a href="../../about/">About</a></nav><a class="header-github" target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://github.com/eonity-org">GitHub <span aria-hidden="true">↗</span></a></div></header>
+<script type="module">var e=document.querySelector(`.site-header`);if(e){let t=()=>{document.documentElement.style.setProperty(`--header-height`,`${e.getBoundingClientRect().height}px`)};t(),new ResizeObserver(t).observe(e)}</script></header>
+<main id="sw-content" data-sw="content" class="sw-leaf sw-d1" style=""><div class="container docs-shell"><aside class="docs-sidebar"><a class="docs-space" href="../../developers/">TYDAL <span>Developer space</span></a><nav aria-label="Documentation"><div class="docs-nav-group"><p class="eyebrow">Start here</p><ul><li><a href="../../developers/">Developer documentation</a></li><li><a href="../../developers/getting-started/">Getting started</a></li></ul></div><div class="docs-nav-group"><p class="eyebrow">Build and configure</p><ul><li><a href="../../developers/configuration/">Configuration</a></li><li><a href="../../developers/api-and-integrations/">API and integrations</a></li><li><a href="../../developers/fullframe/">FullFrame: an example client of TYDAL</a></li></ul></div><div class="docs-nav-group"><p class="eyebrow">Reference</p><ul><li><a href="../../developers/screenshots/" aria-current="page">Screenshots and walkthroughs</a></li><li><a href="../../developers/troubleshooting/">Troubleshooting</a></li></ul></div></nav><a class="docs-source" target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://github.com/eonity-org/eonweb/tree/main/src/content/developers">Documentation source ↗</a></aside><article class="docs-article"><nav class="docs-breadcrumb" aria-label="Breadcrumb"><a href="../../tydal/">TYDAL</a><span aria-hidden="true">/</span><a href="../../developers/">Developers</a><span aria-hidden="true">/</span><span>Screenshots and walkthroughs</span></nav><header class="docs-heading"><p class="eyebrow">Reference</p><h1>Screenshots and walkthroughs</h1><p class="docs-description">Visual guides to the interface and common development workflows.</p><p class="page-date">Updated <time datetime="2026-10-06">6 October 2026</time></p></header><nav class="docs-toc" aria-label="On this page"><p class="eyebrow">On this page</p><ul><li><a href="#schemes-and-uploads">Schemes and uploads</a></li><li><a href="#vaults">Vaults</a></li><li><a href="#publishing-an-exhibition-in-fullframe">Publishing an exhibition in FullFrame</a></li><li><a href="#workflow-walkthroughs">Workflow walkthroughs</a></li></ul></nav><div class="prose docs-prose"><p>Real captures from a local instance with demonstration content: TYDAL v1.2.0 and FullFrame v0.2.0, taken on 3 and 4 October 2026. Select an image to open it at full size.</p>
+<h2 id="schemes-and-uploads">Schemes and uploads</h2>
+<p><a href="../../assets/images/schemes-and-indexes.webp" target="_blank" rel="noopener noreferrer" title="Opens in a new tab"><img src="../../assets/images/schemes-and-indexes.webp" alt="TYDAL’s Schemes &amp; Indexes page: four schemes (Multimedia, Documents and General Collection, and Photo Exhibition), each with its field count, how many collections use it and which organizations it is offered to, above four search indexes available to all organizations."></a></p>
+<p><em>Schemes and search indexes. A scheme is the field contract a collection follows; an index is where its documents are stored for search.</em></p>
+<p><a href="../../assets/images/upload-wizard.webp" target="_blank" rel="noopener noreferrer" title="Opens in a new tab"><img src="../../assets/images/upload-wizard.webp" alt="TYDAL’s new-resources wizard after uploading two photographs: a choice between Interactive review and Auto, with Auto selected to accept AI-suggested names, descriptions and tags, cluster tags, and name the new workspace."></a></p>
+<p><em>The upload wizard. Review AI suggestions one resource at a time, or let them be applied automatically to the batch.</em></p>
+<h2 id="vaults">Vaults</h2>
+<p><a href="../../assets/images/vault-capabilities.webp" target="_blank" rel="noopener noreferrer" title="Opens in a new tab"><img src="../../assets/images/vault-capabilities.webp" alt="The Capabilities dialog for the Pike and Shot Vault: read tiers for chunk text, binaries and answering questions, the file roles that get addresses or feed chunks, and the write methods the Vault accepts, each following its purpose preset."></a></p>
+<p><em>A Vault’s capabilities. Its purpose sets a preset; each read tier, file role and write method can override it for this Vault only.</em></p>
+<p><a href="../../assets/images/vault-sharing-and-reach.webp" target="_blank" rel="noopener noreferrer" title="Opens in a new tab"><img src="../../assets/images/vault-sharing-and-reach.webp" alt="The Sharing &amp; reach dialog for the Pike and Shot Vault: state Public, its Vault hash, human and machine URLs, time-limited signed links, and an optional base URL for a Vault domain."></a></p>
+<p><em>Sharing and reach: whether the Vault is disabled, private or public, and the addresses people and applications use. The addresses point at the local instance the capture was taken on.</em></p>
+<h2 id="publishing-an-exhibition-in-fullframe">Publishing an exhibition in FullFrame</h2>
+<p>The curator’s side of <a href="../../developers/fullframe/">FullFrame</a>, from setup to a live exhibition, shown with Drift, a demo exhibition.</p>
+<p><a href="../../assets/images/studio-setup.webp" target="_blank" rel="noopener noreferrer" title="Opens in a new tab"><img src="../../assets/images/studio-setup.webp" alt="FullFrame’s studio for Drift in setup: stage Preparing, private to the curator and invited people, with 6 photographs connected to TYDAL, a private exhibition, no jury yet, and step 1, Submissions, below."></a></p>
+<p><em>1. Setup. The stage, the photographs connected from TYDAL, the exhibition’s visibility and the jury.</em></p>
+<p><a href="../../assets/images/studio-photographs.webp" target="_blank" rel="noopener noreferrer" title="Opens in a new tab"><img src="../../assets/images/studio-photographs.webp" alt="Step 2 in FullFrame’s studio, Photographs: an upload box and the six photographs in the exhibition, from “Last Breath of Air” to “Touchdown, Three Ways” by Clara Venn, each with Edit and Remove."></a></p>
+<p><em>2. Photographs. Uploads go straight into the exhibition’s Vault in TYDAL, with the details the curator gives them.</em></p>
+<p><a href="../../assets/images/studio-choose-and-publish.webp" target="_blank" rel="noopener noreferrer" title="Opens in a new tab"><img src="../../assets/images/studio-choose-and-publish.webp" alt="Step 4 in FullFrame’s studio, Choose and publish: the six parachuting photographs in a grid and a Choose photographs button."></a></p>
+<p><em>3. Choose and publish. The curator writes the exhibition’s texts and selects the photographs, then picks a style and publishes.</em></p>
+<p><a href="../../assets/images/studio-views-and-palette.webp" target="_blank" rel="noopener noreferrer" title="Opens in a new tab"><img src="../../assets/images/studio-views-and-palette.webp" alt="FullFrame’s appearance settings: Mosaic and Wall chosen as the views visitors can open, Mosaic as the default, the Blue palette selected from five, and a live preview of the exhibition in the Mosaic view."></a></p>
+<p><em>4. Appearance. Which views visitors can open, the default view and the palette, with a live preview.</em></p>
+<p><a href="../../assets/images/drift-studio-live.webp" target="_blank" rel="noopener noreferrer" title="Opens in a new tab"><img src="../../assets/images/drift-studio-live.webp" alt="FullFrame’s studio after publishing Drift: stage Live, “Your exhibition is live.”, 6 photographs selected, exhibition Published, no jury, and buttons to visit or close the exhibition."></a></p>
+<p><em>5. Live. Publishing activates the selection and opens the Vault; Close exhibition makes it private again.</em></p>
+<h2 id="workflow-walkthroughs">Workflow walkthroughs</h2>
+<p><a href="../../#see-it-work">Watch Claude curate Drift</a>: it reads the exhibition through its Vault, proposes titles and descriptions, and writes them back through the organization’s MCP server after asking permission. FullFrame then shows the new titles without any export or upload.</p>
+</div><footer class="docs-page-footer"><a target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://github.com/eonity-org/eonweb/blob/main/src/content/developers/screenshots.md">Edit this page on GitHub ↗</a><span>Built together, in the open.</span></footer></article></div>
+</main>
+<footer id="sw-footer" data-sw="footer" class="sw-leaf sw-d1" style=""><footer class="site-footer"><div class="container footer-top"><div><a class="brand" href="../../" aria-label="Eonity home"><img src="../../assets/images/eonity-logo.svg" width="383" height="118" alt="Eonity"></a><p>People and AI, working together.</p></div><div class="footer-links"><a href="../../tydal/">TYDAL</a><a href="../../tykerf/">TYKERF</a><a href="../../tyset/">TYSET</a><a href="../../guides/">User guides</a><a href="../../developers/">Developer docs</a><a href="../../about/">About Eonity</a><a target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://github.com/eonity-org">GitHub <svg class="external-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"></path></svg></a><a target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://x.com/eonity_org">Follow Eonity on X <svg class="external-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"></path></svg></a><a href="mailto:develop@eonity.org">develop@eonity.org</a></div></div><div class="container footer-bottom"><span>© 2026 <a href="../../about/">Eonity</a>. Open-source projects under the <a target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>. <a href="../../legal/">Legal notice</a></span><a target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://github.com/eonity-org/eonweb">Website source <svg class="external-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"></path></svg></a></div></footer>
+</footer>
+</div>
+
+</div>
+
+</body>
+</html>
