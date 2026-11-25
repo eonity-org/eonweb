@@ -7,4 +7,8 @@
 /* TYKERF: the shared header box sticks, as the header did */
 [data-sw="nav"]{position:sticky;top:0;z-index:20}
 
+/* kit/styles/footer.css */
+/* the footer bottom line: the legal notice and the website source on the right, apart from the copyright sentence */
+.footer-end { display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: baseline; }
+
 }
