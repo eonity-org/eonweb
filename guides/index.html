@@ -37,42 +37,45 @@ body{font:16px/1.5 system-ui,sans-serif;color:#1d1d1f;background:#fff}
 <meta property="og:image" content="https://eonity.org/assets/images/eonity-card.png">
 <meta name="twitter:card" content="summary_large_image">
 <style data-tykerf-fonts>
+@font-face { font-family: "Inter"; src: url("../assets/fonts/inter-latin-wght-normal.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
 @font-face { font-family: "Manrope"; src: url("../assets/fonts/manrope-latin-wght-normal.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
 </style>
 <!-- TYKERF theme: every template and component uses these variables. Change them in the Page tab. -->
-<style data-tykerf-theme data-tykerf-preset="studio">@layer theme {
+<style data-tykerf-theme data-tykerf-preset="biased">@layer theme {
 
 :root {
-  --color-bg: #f8fbfc;
+  --color-bg: #f7f6f2;
   /* bands, cards and lines follow the background unless you give them a colour of their own */
-  --color-band: #f3f6f8;
-  --color-surface: color-mix(in srgb, var(--color-bg) 96%, var(--color-text));
-  --color-text: #083f58;
-  --color-muted: #1a5d7d;
-  --color-border: color-mix(in srgb, var(--color-bg) 86%, var(--color-text));
+  --color-band: #eeece4;
+  --color-surface: #fcfbf8;
+  --color-text: #17313f;
+  --color-muted: #465a64;
+  --color-border: #dcd9d0;
   --color-accent: #0a5475;
+  /* Eonity: the logos' lighter blue, for labels and the coloured line of a headline */
+  --color-accent-2: #287c9c;
   --color-on-accent: #ffffff;
   /* a pastel of the accent, for soft bands and cards */
-  --color-soft: #eef5f7;
+  --color-soft: #e4eef2;
   /* a second accent for details (rules, dots, bars) and figures on dark cards; light enough for the dark band */
-  --color-highlight: color-mix(in srgb, var(--color-accent) 50%, var(--color-on-dark));
+  --color-highlight: #ea9a27;
   /* the one dark band a page may have (#tone-dark): a footer, a hero */
-  --color-dark: #084059;
-  --color-on-dark: #f1f7f9;
-  --font-body: "Manrope", system-ui, sans-serif;
+  --color-dark: #0b3f57;
+  --color-on-dark: #f7f6f2;
+  --font-body: "Inter", system-ui, sans-serif;
   --font-heading: "Manrope", system-ui, sans-serif;
   /* a second voice for subtitles and quotes */
   --font-accent: "Manrope", system-ui, sans-serif;
-  --weight-heading: 500;
-  --tracking-heading: -0.03em;
-  --text-hero: clamp(44px, 7.2vw, 96px);
-  --text-title: clamp(32px, 4.2vw, 52px);
+  --weight-heading: 700;
+  --tracking-heading: -0.035em;
+  --text-hero: clamp(42px, 6vw, 84px);
+  --text-title: clamp(30px, 3.4vw, 46px);
   --text-lead: clamp(18px, 1.5vw, 21px);
   --text-body: 17px;
-  --radius: 8px;
-  --radius-button: 4px;
+  --radius: 10px;
+  --radius-button: 6px;
   --gap: 24px;
-  --space-section: clamp(72px, 10vw, 136px);
+  --space-section: clamp(64px, 8vw, 112px);
   --max-width: 1240px;
 }
 body { background: var(--color-bg); color: var(--color-text); font: var(--text-body)/1.6 var(--font-body); -webkit-font-smoothing: antialiased; }
@@ -110,19 +113,21 @@ a { color: var(--color-accent); }
 <meta name="twitter:site" content="@eonity_org">
 <meta name="twitter:image:alt" content="The eonity logo above the line “Structure and meaning for people and AI.” above the TYDAL, TYKERF and TYSET logos.">
 <!-- /eonity: every page -->
-<link rel="stylesheet" href="../kit/site.css?v=c669b41be3c6" data-tykerf-kit>
+<link rel="stylesheet" href="../kit/site.css?v=9cfe97a36f57" data-tykerf-kit>
 
 <link rel="canonical" href="https://eonity.org/guides/">
 <meta property="og:url" content="https://eonity.org/guides/">
 <meta name="generator" content="TYKERF 2.0.0-dev (https://eonity.org/tykerf/)">
-<meta name="tykerf-build" content="8f00e1efd5e3">
+<meta name="tykerf-build" content="7dbadf8002f9">
 </head>
 <body>
 <div id="sw--page">
 <div id="sw-page" data-sw="page" class="sw-op sw-H sw-d0" style="">
-<header id="sw-nav" data-sw="nav" class="sw-leaf sw-d1" style=""><header class="site-header"><div class="container header-inner"><a class="brand" href="../" aria-label="Eonity home"><img src="../assets/images/eonity-logo.svg" width="383" height="118" alt="Eonity"></a><nav aria-label="Main navigation"><a href="../tydal/">TYDAL</a><a href="../tykerf/">TYKERF</a><a href="../tyset/">TYSET</a><a href="../guides/" aria-current="page">Guides</a><a href="../developers/">Developers</a><a href="../about/">About</a></nav><a class="header-github" target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://github.com/eonity-org">GitHub <span aria-hidden="true">↗</span></a></div></header>
-<script type="module">var e=document.querySelector(`.site-header`);if(e){let t=()=>{document.documentElement.style.setProperty(`--header-height`,`${e.getBoundingClientRect().height}px`)};t(),new ResizeObserver(t).observe(e)}</script></header>
-<main id="sw-content" data-sw="content" class="sw-leaf sw-d1" style=""><article class="container content-page"><a class="text-link back-link" href="../">← Back to Eonity</a><p class="eyebrow">Using the tools</p><h1>User guides</h1><p class="content-intro">Step-by-step guides for the people who use TYDAL and TYKERF, organized by role or task, with screenshots of each screen.</p><p class="page-date">Updated <time datetime="2026-11-03">3 November 2026</time></p><div class="prose"><p>These guides are for the people who <strong>use</strong> TYDAL and TYKERF: members who browse, upload and share resources, the administrators who look after an organization, and the people who build web pages with TYKERF. They are maintained alongside the code in each product’s repository, so they always match the latest release.</p>
+<header id="sw-nav" data-sw="nav" class="sw-leaf sw-d1" style=""><header class="site-header"><div class="container header-inner"><a class="brand" href="../" aria-label="Eonity home"><img src="../assets/images/eonity-logo-64.png" srcset="../assets/images/eonity-logo-64.png 1x, ../assets/images/eonity-logo-140.png 2x" width="139" height="48" alt="Eonity"></a><nav aria-label="Main navigation"><a href="../">Home</a><a href="../tydal/">TYDAL<small class="nav-hint">Digital assets</small></a><a href="../tykerf/">TYKERF<small class="nav-hint">Websites</small></a><a href="../tyset/">TYSET<small class="nav-hint">Documents</small></a><a href="../about/">About</a></nav><nav class="nav-more" aria-label="Guides and documentation"><a href="../guides/" aria-current="page">Guides</a><a href="../developers/">Developers</a></nav><a class="header-github" target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://github.com/eonity-org">GitHub <span aria-hidden="true">↗</span></a></div></header>
+<script type="module">var e=document.querySelector(`.site-header`);if(e){let t=()=>{document.documentElement.style.setProperty(`--header-height`,`${e.getBoundingClientRect().height}px`)};t(),new ResizeObserver(t).observe(e)}</script>
+<script type="module">var n=document.querySelectorAll(`.header-inner nav a`);if(n.length&&![...n].some(a=>a.hasAttribute(`aria-current`))){let h=location.pathname,b=null,l=0;n.forEach(a=>{let p=new URL(a.href).pathname;p!==`/`&&h.startsWith(p)&&p.length>l&&(b=a,l=p.length)}),b&&b.setAttribute(`aria-current`,`true`)}</script>
+</header>
+<main id="sw-content" data-sw="content" class="sw-leaf sw-d1" style=""><article class="container content-page"><p class="eyebrow">Using the tools</p><h1>User guides</h1><p class="content-intro">Step-by-step guides for the people who use TYDAL and TYKERF, organized by role or task, with screenshots of each screen.</p><p class="page-date">Updated <time data-tykerf-macro="updated" datetime="2026-11-25">November 25, 2026</time></p><div class="prose"><p>These guides are for the people who <strong>use</strong> TYDAL and TYKERF: members who browse, upload and share resources, the administrators who look after an organization, and the people who build web pages with TYKERF. They are maintained alongside the code in each product’s repository, so they always match the latest release.</p>
 <p>To install, configure or build on TYDAL, see the <a href="../developers/">developer documentation</a>. For TYKERF, see its <a href="https://github.com/eonity-org/tykerf/blob/main/docs/developer-guide/README.md" target="_blank" rel="noopener noreferrer" title="Opens in a new tab">developer guide</a>.</p>
 <h2 id="tydal">TYDAL</h2>
 <p>TYDAL is where your organization’s resources live: the library, the upload wizard with AI suggestions, tags, workspaces and the Vaults that share content outside TYDAL. Start with the <a href="https://github.com/eonity-org/tydal/blob/main/docs/user-guide/README.md" target="_blank" rel="noopener noreferrer" title="Opens in a new tab">TYDAL user guide</a>, or go straight to a chapter:</p>
@@ -220,10 +225,10 @@ a { color: var(--color-accent); }
 </table>
 <p>To watch TYKERF at work first, see <a href="../tykerf/#tasks">Kaity work through a list of tasks</a> or <a href="../tykerf/#see-it-work">build a page about Lisbon</a>.</p>
 <h2 id="tyset">TYSET</h2>
-<p>TYSET, structured desktop publishing for reviewing, correcting and translating documents, arrives in a few weeks. Its guides will be listed here. See <a href="../tyset/">TYSET</a>.</p>
+<p>TYSET, structured desktop publishing for reviewing, correcting and translating documents, is in development. Its guides will be listed here. See <a href="../tyset/">TYSET</a>.</p>
 </div></article>
 </main>
-<footer id="sw-footer" data-sw="footer" class="sw-leaf sw-d1" style=""><footer class="site-footer"><div class="container footer-top"><div><a class="brand" href="../" aria-label="Eonity home"><img src="../assets/images/eonity-logo.svg" width="383" height="118" alt="Eonity"></a><p>People and AI, working together.</p></div><div class="footer-links"><a href="../tydal/">TYDAL</a><a href="../tykerf/">TYKERF</a><a href="../tyset/">TYSET</a><a href="../guides/" aria-current="page">User guides</a><a href="../developers/">Developer docs</a><a href="../about/">About Eonity</a><a target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://github.com/eonity-org">GitHub <svg class="external-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"></path></svg></a><a target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://x.com/eonity_org">Follow Eonity on X <svg class="external-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"></path></svg></a><a href="mailto:develop@eonity.org">develop@eonity.org</a></div></div><div class="container footer-bottom"><div class="footer-row"><span>© <span data-tykerf-macro="year">2026</span> <a href="../about/">Eonity</a>. Open-source projects under the <a target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>.</span><a href="../legal/">Legal notice</a></div><div class="footer-row"><span>Website edited and published with <a target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://github.com/eonity-org/tykerf">TYKERF</a> on <time data-tykerf-macro="published" datetime="2026-11-25">November 25, 2026</time>.</span><a target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://github.com/eonity-org/eonweb">Website source <svg class="external-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"></path></svg></a></div></div></footer>
+<footer id="sw-footer" data-sw="footer" class="sw-leaf sw-d1" style=""><footer class="site-footer"><div class="container footer-top"><div><a class="brand" href="../" aria-label="Eonity home"><img src="../assets/images/eonity-logo-64.png" srcset="../assets/images/eonity-logo-64.png 1x, ../assets/images/eonity-logo-140.png 2x" width="139" height="48" alt="Eonity"></a><p>People and AI, working together.</p></div><div class="footer-nav"><div class="footer-links"><a href="../tydal/">TYDAL</a><a href="../tykerf/">TYKERF</a><a href="../tyset/">TYSET</a><a href="../guides/" aria-current="page">User guides</a><a href="../developers/">Developer docs</a><a href="../about/">About Eonity</a></div><div class="footer-links footer-contact"><a href="mailto:develop@eonity.org">Write to us: develop@eonity.org</a><a target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://github.com/eonity-org">GitHub <svg class="external-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"></path></svg></a><a target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://x.com/eonity_org">Follow Eonity on X <svg class="external-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"></path></svg></a></div></div></div></div><div class="container footer-bottom"><div class="footer-row"><span>© <span data-tykerf-macro="year">2026</span> <a href="../about/">Eonity</a>. Open-source projects under the <a target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>.</span><a href="../legal/">Legal notice</a></div><div class="footer-row"><span>Website edited and published with <a target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://github.com/eonity-org/tykerf">TYKERF</a> on <time data-tykerf-macro="published" datetime="2026-11-26">November 26, 2026</time>.</span><a target="_blank" rel="noopener noreferrer" title="Opens in a new tab" href="https://github.com/eonity-org/eonweb">Website source <svg class="external-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 12 4M4 4h8v8"></path></svg></a></div></div></footer>
 </footer>
 </div>
 
